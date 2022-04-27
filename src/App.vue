@@ -4,7 +4,8 @@
 </script>
 
 <template>
-  <router-view />
+  <!-- <router-view /> -->
+  <BasicLayout />
 </template>
 
 <style lang="scss"></style>
