@@ -9,6 +9,7 @@
       >
         <Coordinate label="X" :value="x" />
         <Coordinate label="Y" :value="y" />
+        <Coordinate label="Y" :value="y" />
       </div>
     </div>
   </div>
