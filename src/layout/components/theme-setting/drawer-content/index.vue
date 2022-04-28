@@ -14,12 +14,12 @@ import { useAppStore } from '@/store'
 
 const app = useAppStore()
 const handleClose = (done: () => void) => {
-  ElMessageBox.confirm('Are you sure you want to close this?')
-    .then(() => {
-      done()
-    })
-    .catch(() => {
-      // catch error
-    })
+  // ElMessageBox.confirm('Are you sure you want to close this?')
+  //   .then(() => {
+  //     done()
+  //   })
+  //   .catch(() => {
+  //     // catch error
+  //   })
 }
 </script>

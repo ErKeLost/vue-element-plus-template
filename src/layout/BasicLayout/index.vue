@@ -88,12 +88,7 @@
     <template #footer>
       <div class="flex-center h-full bg-[#bfa]">Footer</div>
     </template>
-    <div text-center>
-      <img
-        src="
-    https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-v3-dark.svg"
-      />
-    </div>
+    <div text-center></div>
     <div v-for="i in 100" :key="i" class="text-center">{{ i }}</div>
   </adny-layout>
   <ThemeSetting />
