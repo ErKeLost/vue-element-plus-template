@@ -12,6 +12,8 @@ declare module 'vue' {
     BlankLayout: typeof import('./../src/layout/BlankLayout/index.vue')['default']
     ContentLayout: typeof import('./../src/layout/components/content-layout/index.vue')['default']
     Coordinate: typeof import('./../src/views/login/cpns/coordinate.vue')['default']
+    ElButton: typeof import('element-plus/es')['ElButton']
+    ElDatePicker: typeof import('element-plus/es')['ElDatePicker']
     ExceptionBase: typeof import('./../src/components/exception/ExceptionBase.vue')['default']
     IconCustomSign: typeof import('~icons/custom/sign')['default']
     Login: typeof import('./../src/views/login/index.vue')['default']

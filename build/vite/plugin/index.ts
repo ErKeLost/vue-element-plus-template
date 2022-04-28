@@ -15,7 +15,10 @@ import svgLoader from 'vite-svg-loader'
 import OptimizationPersist from 'vite-plugin-optimize-persist'
 import PkgConfig from 'vite-plugin-package-config'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
-import { VueUseComponentsResolver } from 'unplugin-vue-components/resolvers'
+import {
+  VueUseComponentsResolver,
+  ElementPlusResolver
+} from 'unplugin-vue-components/resolvers'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { resolvePath } from '../../utils'
 const vitePath = resolvePath('../../../', import.meta.url)
@@ -57,6 +60,7 @@ export function createVitePlugins(viteEnv: ImportMetaEnv, isBuild: boolean) {
       // Auto import functions from Element Plus, e.g. ElMessage, ElMessageBox... (with style)
       // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
       resolvers: [
+        ElementPlusResolver(),
         // Auto import icon components
         // 自动导入图标组件
         IconsResolver({
@@ -80,7 +84,8 @@ export function createVitePlugins(viteEnv: ImportMetaEnv, isBuild: boolean) {
           customCollections: ['custom'],
           componentPrefix: 'icon'
         }),
-        VueUseComponentsResolver()
+        VueUseComponentsResolver(),
+        ElementPlusResolver()
       ]
     }),
     Icons({

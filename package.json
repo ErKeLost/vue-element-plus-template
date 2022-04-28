@@ -21,6 +21,8 @@
     "@erkelost/layout": "^2.3.0",
     "@vueuse/core": "^8.2.5",
     "dayjs": "^1.11.0",
+    "echarts": "^5.3.2",
+    "element-plus": "2.1.9",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.13",
     "vue": "^3.2.25",

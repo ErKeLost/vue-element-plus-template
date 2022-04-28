@@ -16,6 +16,14 @@
     </template>
     <template #sider>
       <div class="h-full bg-[#fab] whitespace-nowrap">
+        <el-date-picker
+          v-model="value1"
+          type="datetimerange"
+          range-separator="To"
+          start-placeholder="Start date"
+          end-placeholder="End date"
+        />
+        <el-button>我是按钮</el-button>
         <div class="flex-center h-56px">Sider</div>
         <div>
           <h4>layout mode:</h4>
@@ -91,8 +99,39 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
+const value1 = ref([
+  new Date(2000, 10, 10, 10, 10),
+  new Date(2000, 10, 11, 10, 10)
+])
+const shortcuts = [
+  {
+    text: 'Last week',
+    value: () => {
+      const end = new Date()
+      const start = new Date()
+      start.setTime(start.getTime() - 3600 * 1000 * 24 * 7)
+      return [start, end]
+    }
+  },
+  {
+    text: 'Last month',
+    value: () => {
+      const end = new Date()
+      const start = new Date()
+      start.setTime(start.getTime() - 3600 * 1000 * 24 * 30)
+      return [start, end]
+    }
+  },
+  {
+    text: 'Last 3 months',
+    value: () => {
+      const end = new Date()
+      const start = new Date()
+      start.setTime(start.getTime() - 3600 * 1000 * 24 * 90)
+      return [start, end]
+    }
+  }
+]
 type Mode = 'vertical' | 'horizontal'
 const mode = ref<Mode>('vertical')
 const modeList: Mode[] = ['vertical', 'horizontal']
