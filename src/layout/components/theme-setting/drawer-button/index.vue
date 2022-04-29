@@ -8,7 +8,7 @@
     w-42px
     h-42px
     p-0
-    duration-250
+    duration-300
     transition-all
     @click="app.toggleSettingDrawerVisible"
     :class="[
