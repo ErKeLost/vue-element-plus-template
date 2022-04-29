@@ -2,10 +2,13 @@
   <el-drawer
     :size="350"
     v-model="app.settingDrawerVisible"
-    title="I am the title"
+    :with-header="false"
     :before-close="handleClose"
+    :append-to-body="true"
+    :show-close="false"
+    :close-on-press-escape="true"
   >
-    <span>Hi, there!</span>
+    <div text-center>全局配置</div>
   </el-drawer>
 </template>
 
