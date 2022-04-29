@@ -8,6 +8,7 @@
     w-42px
     h-42px
     p-0
+    duration-250
     transition-all
     @click="app.toggleSettingDrawerVisible"
     :class="[
@@ -15,8 +16,10 @@
       app.settingDrawerVisible ? 'ease-out' : 'ease-in'
     ]"
   >
-    <CarbonSettingsServices text-2xl v-if="app.settingDrawerVisible" />
-    <CarbonClose text-2xl v-else />
+    <CarbonClose v-if="app.settingDrawerVisible" text-2xl />
+    <el-icon text-2xl v-else class="is-loading">
+      <CarbonSettings />
+    </el-icon>
   </el-button>
 </template>
 <script lang="ts" setup>
