@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit",
     "prettier": "prettier --write .",
-    "lint": "npm run lint:script",
+    "lint": "pnpm lint:script",
     "lint:script": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./",
     "preinstall": "npx only-allow pnpm",
     "postinstall": "husky install",
@@ -72,8 +72,8 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,tsx,ts,json}": [
-      "pnpm run lint:script",
-      "prettier --write"
+      "npm run lint:script",
+      "git add --force"
     ]
   },
   "vite": {

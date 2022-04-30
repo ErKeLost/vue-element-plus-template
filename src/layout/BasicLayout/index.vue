@@ -46,7 +46,7 @@ import { useAppStore, useThemeStore } from '@/store'
 import { useBasicLayout } from '@/composables'
 
 const app = useAppStore()
-const theme = useThemeStore();
+const theme = useThemeStore()
 
 const { mode, siderVisible, siderWidth, siderCollapsedWidth } = useBasicLayout()
 const value1 = ref([

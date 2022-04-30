@@ -22,7 +22,9 @@
         ></a>
       </div>
     </div>
-    <div text-center fw300 m-5 text-gray-500>ERKELOST & ADNY @COPYRIGHT 2022</div>
+    <div text-center fw300 m-5 text-gray-500>
+      ERKELOST & ADNY @COPYRIGHT 2022
+    </div>
   </div>
 </template>
 
