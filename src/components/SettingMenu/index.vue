@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-y-center justify-between">
+  <div my-5 flex items-center justify-between>
     <span>{{ label }}</span>
     <slot></slot>
   </div>
@@ -8,9 +8,9 @@
 <script lang="ts" setup>
 interface Props {
   /** 文本 */
-  label: string;
+  label: string
 }
 
-defineProps<Props>();
+defineProps<Props>()
 </script>
 <style scoped></style>

@@ -8,7 +8,7 @@
     :show-close="false"
     :close-on-press-escape="true"
   >
-    <div text-center grid justify-items-center align-items-center>
+    <div text-center>
       <GlobalConfig />
     </div>
   </el-drawer>

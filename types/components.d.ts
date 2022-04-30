@@ -17,11 +17,13 @@ declare module 'vue' {
     DrawerButton: typeof import('./../src/layout/components/theme-setting/drawer-button/index.vue')['default']
     DrawerContent: typeof import('./../src/layout/components/theme-setting/drawer-content/index.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElCard: typeof import('element-plus/es')['ElCard']
     ElDatePicker: typeof import('element-plus/es')['ElDatePicker']
     ElDivider: typeof import('element-plus/es')['ElDivider']
     ElDrawer: typeof import('element-plus/es')['ElDrawer']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
+    ElSpace: typeof import('element-plus/es')['ElSpace']
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
     ExceptionBase: typeof import('./../src/components/Exception/ExceptionBase.vue')['default']
     GlobalConfig: typeof import('./../src/layout/components/theme-setting/drawer-content/global-config/index.vue')['default']
@@ -38,4 +40,4 @@ declare module 'vue' {
   }
 }
 
-export { }
+export {}
