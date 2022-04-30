@@ -70,8 +70,7 @@
     "vue-tsc": "^0.29.8"
   },
   "lint-staged": {
-    "**/*.{js,jsx,tsx,ts,json}": [
-    ]
+    "**/*.{js,jsx,tsx,ts,json}": []
   },
   "vite": {
     "optimizeDeps": {
