@@ -7,8 +7,8 @@
     active-color="#000"
     inactive-color="#000"
     border-color="#fff"
-    :active-icon="RiMoonFoggyFill"
-    :inactive-icon="IcBaselineWbSunny"
+    :active-icon="sunIcon"
+    :inactive-icon="moonIcon"
   />
   <el-divider title-placement="center">布局模式</el-divider>
   <el-space justify="space-between">
@@ -27,6 +27,8 @@
 import { useThemeStore } from '@/store'
 import RiMoonFoggyFill from '@/components/Icon/CarbonMoon.vue'
 import IcBaselineWbSunny from '@/components/Icon/IcBaselineWbSunny.vue'
+import sunIcon from '@/assets/svg/sun.svg?component'
+import moonIcon from '@/assets/svg/moon.svg?component'
 console.log(RiMoonFoggyFill)
 
 const theme = useThemeStore()
