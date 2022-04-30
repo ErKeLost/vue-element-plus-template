@@ -9,6 +9,7 @@
     :close-on-press-escape="true"
   >
     <div text-center>
+      <GlobalLayout />
       <GlobalConfig />
     </div>
   </el-drawer>
@@ -28,3 +29,8 @@ const handleClose = (done: () => void) => {
     })
 }
 </script>
+<style scoped lang="scss">
+:deep(.el-overlay) {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+</style>
