@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 export enum RouteConstant {
   PAGE_NOT_FOUND = 'not-found',
   PAGE_NOT_FOUND_PAGE = 'not-found-page',

@@ -18,7 +18,7 @@ specifiers:
   dayjs: ^1.11.0
   dotenv: ^16.0.0
   echarts: ^5.3.2
-  element-plus: 2.1.9
+  element-plus: 2.1.10
   eslint: ^8.12.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-import: ^2.26.0
@@ -26,6 +26,7 @@ specifiers:
   eslint-plugin-vue: ^8.6.0
   husky: ^7.0.0
   lint-staged: ^12.3.7
+  lodash-es: ^4.17.21
   nprogress: ^0.2.0
   pinia: ^2.0.13
   prettier: ^2.6.2
@@ -54,7 +55,8 @@ dependencies:
   '@vueuse/core': 8.2.6_vue@3.2.33
   dayjs: 1.11.1
   echarts: 5.3.2
-  element-plus: 2.1.9_vue@3.2.33
+  element-plus: 2.1.10_vue@3.2.33
+  lodash-es: 4.17.21
   nprogress: 0.2.0
   pinia: 2.0.13_typescript@4.6.3+vue@3.2.33
   vue: 3.2.33
@@ -2015,8 +2017,8 @@ packages:
     resolution: {integrity: sha512-/s3+fwhKf1YK4k7btOImOzCQLpUjS6MaPf0ODTNuT4eTM1Bg4itBpLkydhOzJmpmH6Z9eXFyuuK5czsmzRzwtw==}
     dev: true
 
-  /element-plus/2.1.9_vue@3.2.33:
-    resolution: {integrity: sha512-6mWqS3YrmJPnouWP4otzL8+MehfOnDFqDbcIdnmC07p+Z0JkWe/CVKc4Wky8AYC8nyDMUQyiZYvooCbqGuM7pg==}
+  /element-plus/2.1.10_vue@3.2.33:
+    resolution: {integrity: sha512-sS9OMgP20dlYipmzHlEEgCJU+ID7+03YpRpoJWNQEH736C6ArmDMLnGFe8DUjPvwbUEXRA2d0Eo5d0apFgkSqg==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
