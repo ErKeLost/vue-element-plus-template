@@ -70,7 +70,10 @@
     "vue-tsc": "^0.29.8"
   },
   "lint-staged": {
-    "**/*.{js,jsx,tsx,ts,json}": []
+    "**/*.{js,jsx,tsx,ts,json}": [
+      "pnpm run lint:script",
+      "prettier --write"
+    ]
   },
   "vite": {
     "optimizeDeps": {
