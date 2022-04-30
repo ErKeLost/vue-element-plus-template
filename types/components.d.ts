@@ -26,13 +26,11 @@ declare module 'vue' {
     GlobalConfig: typeof import('./../src/layout/components/theme-setting/drawer-content/global-config/index.vue')['default']
     GlobalLayout: typeof import('./../src/layout/components/theme-setting/drawer-content/global-layout/index.vue')['default']
     GlobalTheme: typeof import('./../src/layout/components/theme-setting/drawer-content/global-theme/index.vue')['default']
-    IconCustomSign: typeof import('~icons/custom/sign')['default']
     Login: typeof import('./../src/views/login/index.vue')['default']
     LoginAccount: typeof import('./../src/views/login/cpns/login-account.vue')['default']
     LoginPreview: typeof import('./../src/views/login/cpns/login-preview.vue')['default']
     LogosBitriseIcon: typeof import('./../src/components/Icon/LogosBitriseIcon.vue')['default']
     Redirect: typeof import('./../src/views/redirect/index.vue')['default']
-    SettingMenu: typeof import('./../src/components/SettingMenu/index.vue')['default']
     ThemeSetting: typeof import('./../src/layout/components/theme-setting/index.vue')['default']
   }
 }
