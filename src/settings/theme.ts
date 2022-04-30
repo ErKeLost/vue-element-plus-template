@@ -59,6 +59,7 @@ const defaultThemeSetting: Theme.Setting = {
   showReload: true,
   header: {
     inverted: false,
+    visible: true,
     height: 56,
     crumb: {
       visible: true,
@@ -76,6 +77,7 @@ const defaultThemeSetting: Theme.Setting = {
     isCache: true
   },
   sider: {
+    visible: true,
     inverted: false,
     width: 220,
     collapsedWidth: 64,
@@ -95,6 +97,7 @@ const defaultThemeSetting: Theme.Setting = {
     ]
   },
   footer: {
+    visible: true,
     fixed: false,
     height: 48
   },

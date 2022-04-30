@@ -62,6 +62,7 @@
   "header": {
     "inverted": false,
     "height": 56,
+    "visible": true,
     "crumb": {
       "visible": true,
       "showIcon": true
@@ -84,6 +85,7 @@
     "isCache": true
   },
   "sider": {
+    "visible": true,
     "inverted": false,
     "width": 220,
     "collapsedWidth": 64,
@@ -109,6 +111,7 @@
     ]
   },
   "footer": {
+    "visible": true,
     "fixed": false,
     "height": 48
   },

@@ -1,22 +1,24 @@
 /** 枚举的key类型 */
 declare namespace EnumType {
   /** 布局组件名称 */
-  type LayoutComponentName = keyof typeof import('@/enum').EnumLayoutComponentName;
+  type LayoutComponentName =
+    keyof typeof import('@/enum').EnumLayoutComponentName
 
   /** 布局模式 */
-  type ThemeLayoutMode = keyof typeof import('@/enum').EnumThemeLayoutMode;
+  type ThemeLayoutMode = keyof typeof import('@/enum').EnumThemeLayoutMode
 
   /** 多页签风格 */
-  type ThemeTabMode = keyof typeof import('@/enum').EnumThemeTabMode;
+  type ThemeTabMode = keyof typeof import('@/enum').EnumThemeTabMode
 
   /** 水平模式的菜单位置 */
-  type ThemeHorizontalMenuPosition = keyof typeof import('@/enum').EnumThemeHorizontalMenuPosition;
+  type ThemeHorizontalMenuPosition =
+    keyof typeof import('@/enum').EnumThemeHorizontalMenuPosition
 
   /** 过渡动画 */
-  type ThemeAnimateMode = keyof typeof import('@/enum').EnumThemeAnimateMode;
+  type ThemeAnimateMode = keyof typeof import('@/enum').EnumThemeAnimateMode
 
   /** 登录模块 */
-  type LoginModuleKey = keyof typeof import('@/enum').EnumLoginModule;
+  type LoginModuleKey = keyof typeof import('@/enum').EnumLoginModule
 }
 
 /** 请求的相关类型 */
@@ -24,7 +26,7 @@ declare namespace Service {
   /** 请求环境类型
    * - test:测试环境
    * - prod:正式环境 */
-  type HttpEnv = 'test' | 'prod';
+  type HttpEnv = 'test' | 'prod'
 
   /**
    * 请求的错误类型：
@@ -32,65 +34,65 @@ declare namespace Service {
    * - http: 请求成功，响应的状态码非200的错误
    * - backend: 请求成功，响应的状态码为200，由后端定义的业务错误
    */
-  type RequestErrorType = 'axios' | 'http' | 'backend';
+  type RequestErrorType = 'axios' | 'http' | 'backend'
 
   /** 请求错误 */
   interface RequestError {
     /** 请求服务的错误类型 */
-    type: RequestErrorType;
+    type: RequestErrorType
     /** 错误码 */
-    code: string | number;
+    code: string | number
     /** 错误信息 */
-    msg: string;
+    msg: string
   }
 
   /** 后端接口返回的数据结构配置 */
   interface BackendResultConfig {
     /** 表示后端请求状态码的属性字段 */
-    codeKey: string;
+    codeKey: string
     /** 表示后端请求数据的属性字段 */
-    dataKey: string;
+    dataKey: string
     /** 表示后端消息的属性字段 */
-    msgKey: string;
+    msgKey: string
     /** 后端业务上定义的成功请求的状态 */
-    successCode: number | string;
+    successCode: number | string
   }
 
   /** 自定义的请求成功结果 */
   interface SuccessResult<T = any> {
     /** 请求错误 */
-    error: null;
+    error: null
     /** 请求数据 */
-    data: T;
+    data: T
   }
 
   /** 自定义的请求失败结果 */
   interface FailedResult {
     /** 请求错误 */
-    error: RequestError;
+    error: RequestError
     /** 请求数据 */
-    data: null;
+    data: null
   }
 
   /** 自定义的请求结果 */
-  type RequestResult<T = any> = SuccessResult<T> | FailedResult;
+  type RequestResult<T = any> = SuccessResult<T> | FailedResult
 
   /** mock示例接口类型：后端接口返回的数据的类型 */
   interface MockServiceResult<T = any> {
     /** 状态码 */
-    code: string | number;
+    code: string | number
     /** 接口数据 */
-    data: T;
+    data: T
     /** 接口消息 */
-    message: string;
+    message: string
   }
 
   /** mock的响应option */
   interface MockOption {
-    url: Record<string, any>;
-    body: Record<string, any>;
-    query: Record<string, any>;
-    headers: Record<string, any>;
+    url: Record<string, any>
+    body: Record<string, any>
+    query: Record<string, any>
+    headers: Record<string, any>
   }
 }
 
@@ -99,187 +101,195 @@ declare namespace Theme {
   /** 主题配置 */
   interface Setting {
     /** 是否自动跟随系统主题 */
-    followSystemTheme: boolean;
+    followSystemTheme: boolean
     /** 暗黑模式 */
-    darkMode: boolean;
+    darkMode: boolean
     /** 布局样式 */
-    layout: Layout;
+    layout: Layout
     /** 主题颜色 */
-    themeColor: string;
+    themeColor: string
     /** 主题颜色列表 */
-    themeColorList: string[];
+    themeColorList: string[]
     /** 其他颜色 */
-    otherColor: OtherColor;
+    otherColor: OtherColor
     /** 是否自定义info的颜色(默认取比主题色深一级的颜色) */
-    isCustomizeInfoColor: boolean;
+    isCustomizeInfoColor: boolean
     /** 固定头部和多页签 */
-    fixedHeaderAndTab: boolean;
+    fixedHeaderAndTab: boolean
     /** 显示重载按钮 */
-    showReload: boolean;
+    showReload: boolean
     /** 头部样式 */
-    header: Header;
+    header: Header
     /** 标多页签样式 */
-    tab: Tab;
+    tab: Tab
     /** 侧边栏样式 */
-    sider: Sider;
+    sider: Sider
     /** 菜单样式 */
-    menu: Menu;
+    menu: Menu
     /** 底部样式 */
-    footer: Footer;
+    footer: Footer
     /** 页面样式 */
-    page: Page;
+    page: Page
   }
   /** 布局样式 */
   interface Layout {
     /** 最小宽度 */
-    minWidth: number;
+    minWidth: number
     /** 布局模式 */
-    mode: EnumType.ThemeLayoutMode;
+    mode: EnumType.ThemeLayoutMode
     /** 布局模式列表 */
-    modeList: LayoutModeList[];
+    modeList: LayoutModeList[]
   }
   interface LayoutModeList {
-    value: EnumType.ThemeLayoutMode;
-    label: import('@/enum').EnumThemeLayoutMode;
+    value: EnumType.ThemeLayoutMode
+    label: import('@/enum').EnumThemeLayoutMode
   }
 
   /** 其他主题颜色 */
   interface OtherColor {
     /** 信息 */
-    info: string;
+    info: string
     /** 成功 */
-    success: string;
+    success: string
     /** 警告 */
-    warning: string;
+    warning: string
     /** 错误 */
-    error: string;
+    error: string
   }
 
   /** 头部样式 */
   interface Header {
+    visible: boolean
+
     /** 头部反转色 */
-    inverted: boolean;
+    inverted: boolean
     /** 头部高度 */
-    height: number;
+    height: number
     /** 面包屑样式 */
-    crumb: Crumb;
+    crumb: Crumb
   }
   /** 面包屑样式 */
   interface Crumb {
     /** 面包屑可见 */
-    visible: boolean;
+    visible: boolean
     /** 显示图标 */
-    showIcon: boolean;
+    showIcon: boolean
   }
 
   /** 标多页签样式 */
   export interface Tab {
     /** 多页签可见 */
-    visible: boolean;
+    visible: boolean
     /** 多页签高度 */
-    height: number;
+    height: number
     /** 多页签风格 */
-    mode: EnumType.ThemeTabMode;
+    mode: EnumType.ThemeTabMode
     /** 多页签风格列表 */
-    modeList: ThemeTabModeList[];
+    modeList: ThemeTabModeList[]
     /** 开启多页签缓存 */
-    isCache: boolean;
+    isCache: boolean
   }
 
   /** 多页签风格列表 */
   interface ThemeTabModeList {
-    value: EnumType.ThemeTabMode;
-    label: import('@/enum').EnumThemeTabMode;
+    value: EnumType.ThemeTabMode
+    label: import('@/enum').EnumThemeTabMode
   }
 
   /** 侧边栏样式 */
   interface Sider {
+    visible: boolean
     /** 侧边栏反转色 */
-    inverted: boolean;
+    inverted: boolean
     /** 侧边栏宽度 */
-    width: number;
+    width: number
     /** 侧边栏折叠时的宽度 */
-    collapsedWidth: number;
+    collapsedWidth: number
     /** vertical-mix模式下侧边栏宽度 */
-    mixWidth: number;
+    mixWidth: number
     /** vertical-mix模式下侧边栏折叠时的宽度 */
-    mixCollapsedWidth: number;
+    mixCollapsedWidth: number
     /** vertical-mix模式下侧边栏的子菜单的宽度 */
-    mixChildMenuWidth: number;
+    mixChildMenuWidth: number
   }
 
   /** 菜单样式 */
   interface Menu {
     /** 水平模式的菜单的位置 */
-    horizontalPosition: HorizontalMenuPosition;
+    horizontalPosition: HorizontalMenuPosition
     /** 水平模式的菜单的位置列表 */
-    horizontalPositionList: HorizontalMenuPositionList[];
+    horizontalPositionList: HorizontalMenuPositionList[]
   }
   /** 水平模式的菜单的位置列表 */
   interface HorizontalMenuPositionList {
-    value: EnumType.ThemeHorizontalMenuPosition;
-    label: import('@/enum').EnumThemeHorizontalMenuPosition;
+    value: EnumType.ThemeHorizontalMenuPosition
+    label: import('@/enum').EnumThemeHorizontalMenuPosition
   }
 
   /** 底部样式 */
   interface Footer {
+    visible: boolean
     /** 是否固定底部 */
-    fixed: boolean;
+    fixed: boolean
     /** 底部高度 */
-    height: number;
+    height: number
   }
 
   /** 页面样式 */
   interface Page {
     /** 页面是否开启动画 */
-    animate: boolean;
+    animate: boolean
     /** 动画类型 */
-    animateMode: EnumType.ThemeAnimateMode;
+    animateMode: EnumType.ThemeAnimateMode
     /** 动画类型列表 */
-    animateModeList: AnimateModeList[];
+    animateModeList: AnimateModeList[]
   }
   /** 动画类型列表 */
   interface AnimateModeList {
-    value: EnumType.ThemeAnimateMode;
-    label: import('@/enum').EnumThemeAnimateMode;
+    value: EnumType.ThemeAnimateMode
+    label: import('@/enum').EnumThemeAnimateMode
   }
 }
 
 /** 全局头部属性 */
 interface GlobalHeaderProps {
   /** 显示logo */
-  showLogo: boolean;
+  showLogo: boolean
   /** 显示头部菜单 */
-  showHeaderMenu: boolean;
+  showHeaderMenu: boolean
   /** 显示菜单折叠按钮 */
-  showMenuCollapse: boolean;
+  showMenuCollapse: boolean
 }
 
 /** 菜单项配置 */
 type GlobalMenuOption = {
-  key: string;
-  label: string;
-  routeName: string;
-  routePath: string;
-  icon?: () => import('vue').VNodeChild;
-  children?: GlobalMenuOption[];
-};
+  key: string
+  label: string
+  routeName: string
+  routePath: string
+  icon?: () => import('vue').VNodeChild
+  children?: GlobalMenuOption[]
+}
 
 /** 面包屑 */
 type GlobalBreadcrumb = import('naive-ui').DropdownOption & {
-  key: string;
-  label: string;
-  disabled: boolean;
-  routeName: string;
-  hasChildren: boolean;
-  children?: GlobalBreadcrumb[];
-};
+  key: string
+  label: string
+  disabled: boolean
+  routeName: string
+  hasChildren: boolean
+  children?: GlobalBreadcrumb[]
+}
 
 /** 多页签Tab的路由 */
-interface GlobalTabRoute extends Pick<import('vue-router').RouteLocationNormalizedLoaded, 'name' | 'path' | 'meta'> {
+interface GlobalTabRoute
+  extends Pick<
+    import('vue-router').RouteLocationNormalizedLoaded,
+    'name' | 'path' | 'meta'
+  > {
   /** 滚动的位置 */
   scrollPosition: {
-    left: number;
-    top: number;
-  };
+    left: number
+    top: number
+  }
 }

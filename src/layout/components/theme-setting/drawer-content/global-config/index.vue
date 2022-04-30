@@ -4,7 +4,7 @@
 
     <setting-menu label="展示Header">
       <el-switch
-        v-model="theme.fixedHeaderAndTab"
+        v-model="theme.header.visible"
         active-text="开启"
         inline-prompt
         inactive-text="关闭"
@@ -12,7 +12,7 @@
     </setting-menu>
     <setting-menu label="展示Tab">
       <el-switch
-        v-model="theme.fixedHeaderAndTab"
+        v-model="theme.tab.visible"
         active-text="开启"
         inline-prompt
         inactive-text="关闭"
@@ -20,7 +20,7 @@
     </setting-menu>
     <setting-menu label="展示Sider">
       <el-switch
-        v-model="theme.fixedHeaderAndTab"
+        v-model="theme.sider.visible"
         active-text="开启"
         inline-prompt
         inactive-text="关闭"
@@ -28,7 +28,7 @@
     </setting-menu>
     <setting-menu label="展示Footer">
       <el-switch
-        v-model="theme.fixedHeaderAndTab"
+        v-model="theme.footer.visible"
         active-text="开启"
         inline-prompt
         inactive-text="关闭"
