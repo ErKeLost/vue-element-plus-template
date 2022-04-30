@@ -31,6 +31,7 @@ declare module 'vue' {
     LoginPreview: typeof import('./../src/views/login/cpns/login-preview.vue')['default']
     LogosBitriseIcon: typeof import('./../src/components/Icon/LogosBitriseIcon.vue')['default']
     Redirect: typeof import('./../src/views/redirect/index.vue')['default']
+    SettingMenu: typeof import('./../src/components/SettingMenu/index.vue')['default']
     ThemeSetting: typeof import('./../src/layout/components/theme-setting/index.vue')['default']
   }
 }

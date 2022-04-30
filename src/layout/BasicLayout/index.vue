@@ -1,12 +1,16 @@
 <template>
   <adny-layout
     :mode="mode"
-    :fixed-header-and-tab="fixedHeaderAndTab"
-    :sider-collapse="siderCollapse"
-    :fixedSider="fixedSider"
-    :holdHeaderFixedSider="holdHeaderFixedSider"
-    :siderVisible="showSider"
-    :fixedFooter="fixedFooter"
+    :min-width="theme.layout.minWidth"
+    :fixed-header-and-tab="theme.fixedHeaderAndTab"
+    :header-height="theme.header.height"
+    :tab-visible="theme.tab.visible"
+    :tab-height="theme.tab.height"
+    :sider-visible="siderVisible"
+    :sider-width="siderWidth"
+    :sider-collapsed-width="siderCollapsedWidth"
+    :sider-collapse="app.siderCollapse"
+    :fixed-footer="theme.footer.fixed"
   >
     <template #header>
       <div text-red class="flex-center h-full bg-[#abf]">Header</div>
@@ -95,40 +99,17 @@
 </template>
 
 <script setup lang="ts">
+import { useAppStore, useThemeStore } from '@/store'
+import { useBasicLayout } from '@/composables'
+
+const app = useAppStore()
+const theme = useThemeStore()
+
+const { mode, siderVisible, siderWidth, siderCollapsedWidth } = useBasicLayout()
 const value1 = ref([
   new Date(2000, 10, 10, 10, 10),
   new Date(2000, 10, 11, 10, 10)
 ])
-type Mode = 'vertical' | 'horizontal'
-const mode = ref<Mode>('vertical')
-const modeList: Mode[] = ['vertical', 'horizontal']
-function setMode(value: Mode) {
-  mode.value = value
-}
-const showSider = ref(true)
-function setShowSider() {
-  showSider.value = !showSider.value
-}
-const fixedFooter = ref(false)
-function setFixedFooter() {
-  fixedFooter.value = !fixedFooter.value
-}
-const fixedHeaderAndTab = ref(true)
-function setFixedHeaderAndTab() {
-  fixedHeaderAndTab.value = !fixedHeaderAndTab.value
-}
-const holdHeaderFixedSider = ref(false)
-function setHoldHeaderFixedSider() {
-  holdHeaderFixedSider.value = !holdHeaderFixedSider.value
-}
-const fixedSider = ref(false)
-function setFixedSider() {
-  fixedSider.value = !fixedSider.value
-}
-const siderCollapse = ref(false)
-function setSiderCollapse() {
-  siderCollapse.value = !siderCollapse.value
-}
 </script>
 
 <style>
