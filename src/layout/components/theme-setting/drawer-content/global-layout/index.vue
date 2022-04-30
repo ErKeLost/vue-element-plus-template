@@ -3,13 +3,12 @@
   <el-switch
     v-model="theme.header.visible"
     size="large"
-    :width="50"
     inline-prompt
     active-color="#000"
     inactive-color="#000"
     border-color="#fff"
     :active-icon="IcBaselineWbSunny"
-    :inactive-icon="CarbonMoon"
+    :inactive-icon="RiMoonFoggyFill"
   />
   <el-divider title-placement="center">布局模式</el-divider>
   <el-space justify="space-between">
@@ -26,13 +25,13 @@
 
 <script setup lang="ts">
 import { useThemeStore } from '@/store'
-import CarbonMoon from '@/components/Icon/CarbonMoon.vue'
+import RiMoonFoggyFill from '@/components/Icon/CarbonMoon.vue'
 import IcBaselineWbSunny from '@/components/Icon/IcBaselineWbSunny.vue'
 const theme = useThemeStore()
 </script>
 <style scoped lang="scss">
 :deep(.el-switch__core) {
-  transform: scale(1.2);
-  width: 4rem !important;
+  transform: scale(1.3);
+  width: 3.5rem !important;
 }
 </style>
