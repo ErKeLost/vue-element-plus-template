@@ -35,7 +35,6 @@ declare module 'vue' {
     IcBaselineWbSunny: typeof import('./../src/components/Icon/IcBaselineWbSunny.vue')['default']
     IconCustomSign: typeof import('~icons/custom/sign')['default']
     LayoutCheckbox: typeof import('./../src/layout/components/theme-setting/drawer-content/global-layout/layout-checkbox/index.vue')['default']
-    LayoutCheckBox: typeof import('./../src/layout/components/theme-setting/drawer-content/global-layout/layout-check-box/index.vue')['default']
     Login: typeof import('./../src/views/login/index.vue')['default']
     LoginAccount: typeof import('./../src/views/login/cpns/login-account.vue')['default']
     LoginPreview: typeof import('./../src/views/login/cpns/login-preview.vue')['default']
