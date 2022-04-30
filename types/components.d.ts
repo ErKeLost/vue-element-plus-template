@@ -22,6 +22,7 @@ declare module 'vue' {
     ElDrawer: typeof import('element-plus/es')['ElDrawer']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
+    ElSwitch: typeof import('element-plus/es')['ElSwitch']
     ExceptionBase: typeof import('./../src/components/Exception/ExceptionBase.vue')['default']
     GlobalConfig: typeof import('./../src/layout/components/theme-setting/drawer-content/global-config/index.vue')['default']
     GlobalLayout: typeof import('./../src/layout/components/theme-setting/drawer-content/global-layout/index.vue')['default']
