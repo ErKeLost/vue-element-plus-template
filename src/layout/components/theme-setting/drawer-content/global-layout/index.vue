@@ -7,8 +7,6 @@
     active-color="#000"
     inactive-color="#000"
     border-color="#fff"
-    :active-icon="IcBaselineWbSunny"
-    :inactive-icon="RiMoonFoggyFill"
   />
   <el-divider title-placement="center">布局模式</el-divider>
   <el-space justify="space-between">
