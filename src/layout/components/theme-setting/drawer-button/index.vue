@@ -11,10 +11,7 @@
     duration-300
     transition-all
     @click="app.toggleSettingDrawerVisible"
-    :class="[
-      { '!right-350px': app.settingDrawerVisible },
-      app.settingDrawerVisible ? 'ease-out' : 'ease-in'
-    ]"
+    :class="[{ '!right-350px': app.settingDrawerVisible }]"
   >
     <CarbonClose v-if="app.settingDrawerVisible" text-2xl />
     <el-icon text-2xl v-else class="is-loading">
