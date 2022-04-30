@@ -33,6 +33,7 @@
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "@iconify/json": "^2.1.26",
+    "@types/lodash-es": "^4.17.6",
     "@types/node": "^17.0.23",
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
