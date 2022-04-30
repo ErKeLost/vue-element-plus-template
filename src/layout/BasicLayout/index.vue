@@ -28,65 +28,6 @@
           end-placeholder="End date"
         />
         <el-button>我是按钮</el-button>
-        <div class="flex-center h-56px">Sider</div>
-        <div>
-          <h4>layout mode:</h4>
-          <div v-for="item in modeList" :key="item">
-            <span class="pr-8px">{{ item }}</span>
-            <input
-              type="radio"
-              name="mode"
-              :value="item"
-              :checked="item === mode"
-              class="cursor-pointer"
-              @change="setMode(item)"
-            />
-          </div>
-        </div>
-        <div class="pt-24px">
-          <span class="pr-8px">fixedHeaderAndTab</span>
-          <input
-            type="checkbox"
-            :checked="fixedHeaderAndTab"
-            @change="setFixedHeaderAndTab"
-          />
-        </div>
-        <div class="pt-24px">
-          <span class="pr-8px">不占据header高度fixed</span>
-          <input
-            type="checkbox"
-            :checked="holdHeaderFixedSider"
-            @change="setHoldHeaderFixedSider"
-          />
-        </div>
-        <div class="pt-24px">
-          <span class="pr-8px">FixedSider</span>
-          <input
-            type="checkbox"
-            :checked="fixedSider"
-            @change="setFixedSider"
-          />
-        </div>
-        <div class="pt-24px">
-          <span class="pr-8px">展示sider</span>
-          <input type="checkbox" :checked="showSider" @change="setShowSider" />
-        </div>
-        <div class="pt-24px">
-          <span class="pr-8px">固定footer</span>
-          <input
-            type="checkbox"
-            :checked="fixedFooter"
-            @change="setFixedFooter"
-          />
-        </div>
-        <div class="pt-24px">
-          <span class="pr-8px">siderCollapse</span>
-          <input
-            type="checkbox"
-            :checked="siderCollapse"
-            @change="setSiderCollapse"
-          />
-        </div>
       </div>
     </template>
     <template #footer>
