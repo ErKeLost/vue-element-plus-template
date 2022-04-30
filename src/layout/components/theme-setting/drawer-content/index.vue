@@ -9,8 +9,7 @@
     :close-on-press-escape="true"
   >
     <div text-center grid justify-items-center align-items-center>
-      <LogosBitriseIcon text-3xl />
-      <span text-2xl> 全局配置 </span>
+      <GlobalConfig />
     </div>
   </el-drawer>
 </template>
