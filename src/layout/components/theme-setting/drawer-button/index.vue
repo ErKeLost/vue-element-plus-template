@@ -7,7 +7,7 @@
     z-10000
     w-42px
     p-0
-    duration-300
+    duration-250
     transition-all
     @click="app.toggleSettingDrawerVisible"
     :class="[{ '!right-350px': app.settingDrawerVisible }]"
