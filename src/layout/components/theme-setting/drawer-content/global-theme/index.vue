@@ -10,13 +10,27 @@
       <color-checkbox
         :color="color"
         :checked="color === theme.themeColor"
-        @click="theme.setThemeColor(color)"
+        @click="setThemeColor(color)"
       />
     </el-col>
   </el-row>
 </template>
 <script lang="ts" setup>
 import { useThemeStore } from '@/store'
-
+import {
+  shadeBgColor,
+  writeNewStyle,
+  createNewStyle
+} from '../../theme-color/element-plus'
+const body = document.documentElement as HTMLElement
 const theme = useThemeStore()
+const setThemeColor = (color: string) => {
+  setEpThemeColor(color)
+}
+const setEpThemeColor = (color: string) => {
+  // @ts-expect-error
+  writeNewStyle(createNewStyle(color))
+  // useEpThemeStoreHook().setEpThemeColor(color)
+  body.style.setProperty('--el-color-primary-active', shadeBgColor(color))
+}
 </script>

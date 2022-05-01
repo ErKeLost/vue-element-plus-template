@@ -6,7 +6,6 @@
     right-14px
     z-10000
     w-42px
-    h-42px
     p-0
     duration-300
     transition-all
@@ -24,3 +23,8 @@ import { useAppStore } from '@/store'
 
 const app = useAppStore()
 </script>
+<style scoped>
+.el-button {
+  height: 42px !important;
+}
+</style>
