@@ -1,4 +1,4 @@
-const themeColors = {
+const themeColors: any = {
   default: {
     color: '#409EFF',
     subMenuActiveText: '#fff',

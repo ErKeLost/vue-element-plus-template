@@ -5,7 +5,7 @@ import { TinyColor } from '@ctrl/tinycolor'
 import { convert } from 'css-color-function'
 
 // 色值表
-const formula = {
+const formula: any = {
   'shade-1': 'color(primary shade(10%))',
   'light-1': 'color(primary tint(10%))',
   'light-2': 'color(primary tint(20%))',
@@ -46,8 +46,8 @@ export const createNewStyle = (
 export const createColors = (
   primary: Record<string, any>
 ): Record<string, any> => {
-  if (!primary) return
-  const colors = {
+  if (!primary) return {}
+  const colors: any = {
     primary
   }
   Object.keys(formula).forEach((key) => {
@@ -57,8 +57,8 @@ export const createColors = (
   return colors
 }
 
-const getStyleTemplate = (data: Record<string, any>): Record<string, any> => {
-  const colorMap = {
+const getStyleTemplate = (data: any): Record<string, any> => {
+  const colorMap: any = {
     '#3a8ee6': 'shade-1',
     '#409eff': 'primary',
     '#53a8ff': 'light-1',

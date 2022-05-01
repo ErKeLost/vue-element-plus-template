@@ -13,9 +13,7 @@
     :class="[{ '!right-350px': app.settingDrawerVisible }]"
   >
     <CarbonClose v-if="app.settingDrawerVisible" text-2xl />
-    <el-icon text-2xl v-else class="is-loading">
-      <CarbonSettings />
-    </el-icon>
+    <CarbonSettings v-else text-2xl />
   </el-button>
 </template>
 <script lang="ts" setup>

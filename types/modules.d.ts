@@ -8,3 +8,6 @@ declare module 'virtual:*' {
   const result: any
   export default result
 }
+declare module 'css-color-function' {
+  export { convert }
+}
