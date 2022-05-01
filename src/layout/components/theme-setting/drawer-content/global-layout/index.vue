@@ -12,7 +12,7 @@
   />
   <el-divider title-placement="center">布局模式</el-divider>
   <el-space justify="space-between">
-    <layout-checkbox
+    <LayoutCheckBox
       v-for="item in theme.layout.modeList"
       :key="item.value"
       :mode="item.value"
@@ -25,12 +25,8 @@
 
 <script setup lang="ts">
 import { useThemeStore } from '@/store'
-import RiMoonFoggyFill from '@/components/Icon/CarbonMoon.vue'
-import IcBaselineWbSunny from '@/components/Icon/IcBaselineWbSunny.vue'
 import sunIcon from '@/assets/svg/sun.svg?component'
 import moonIcon from '@/assets/svg/moon.svg?component'
-console.log(RiMoonFoggyFill)
-
 const theme = useThemeStore()
 </script>
 <style scoped lang="scss">

@@ -1,7 +1,5 @@
 <template>
   <div>
-    <el-divider title-placement="center">颜色主题</el-divider>
-
     <el-divider title-placement="center">界面功能</el-divider>
 
     <setting-menu label="展示Header">
@@ -113,7 +111,6 @@
 <script lang="ts" setup>
 import { useThemeStore } from '@/store'
 
-import SettingMenu from '@/components/SettingMenu/index.vue'
 const value = ref('')
 const theme = useThemeStore()
 const options = [

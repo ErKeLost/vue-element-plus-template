@@ -10,6 +10,7 @@
   >
     <div text-center>
       <GlobalLayout />
+      <GlobalTheme />
       <GlobalConfig />
     </div>
   </el-drawer>
