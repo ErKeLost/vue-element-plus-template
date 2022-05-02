@@ -56,11 +56,6 @@
       <el-button type="warning" round>Warning</el-button>
       <el-button type="danger" round>Danger</el-button>
     </el-row>
-    <el-carousel :interval="4000" type="card" height="200px">
-      <el-carousel-item v-for="item in 6" :key="item">
-        <h3>{{ item }}</h3>
-      </el-carousel-item>
-    </el-carousel>
     <el-carousel
       :initial-index="5"
       :interval="40000"
@@ -90,27 +85,17 @@
 <script setup lang="ts">
 import { useAppStore, useThemeStore } from '@/store'
 import { useBasicLayout } from '@/composables'
-import { createAxios } from '@erkelost/axios-ext'
-import axios from 'axios'
+// import { createAxios } from '@erkelost/axios-ext'
 const value = ref('')
-const http = createAxios({
-  baseURL: '/api',
-  timeout: 5000
-})
+// const http = createAxios({
+//   baseURL: '/api',
+//   timeout: 5000
+// })
 const a = ref<any>(null)
-axios
-  .get('http://123.207.32.32:9001/banner?type=2')
-  .then(function (res) {
-    console.log(res)
-    a.value = res.data.banners
-  })
-  .catch(function (error) {
-    console.log(error)
-  })
-http('/banner?type=2').then((res) => {
-  console.log(res)
-  // a.value = res.data.banners
-})
+// http('/banner?type=2').then((res) => {
+//   console.log(res)
+//   // a.value = res.data.banners
+// })
 
 const app = useAppStore()
 const theme = useThemeStore()
