@@ -56,6 +56,11 @@
       <el-button type="warning" round>Warning</el-button>
       <el-button type="danger" round>Danger</el-button>
     </el-row>
+    <el-carousel indicator-position="outside">
+      <el-carousel-item v-for="item in a" :key="item">
+        <img :src="item.pic" />
+      </el-carousel-item>
+    </el-carousel>
     <div v-for="i in 100" :key="i">{{ i }}</div>
   </adny-layout>
   <ThemeSetting />
@@ -64,6 +69,16 @@
 <script setup lang="ts">
 import { useAppStore, useThemeStore } from '@/store'
 import { useBasicLayout } from '@/composables'
+import { createAxios } from '@erkelost/axios-ext'
+const http = createAxios({
+  baseURL: '/api',
+  timeout: 5000
+})
+const a = ref<any>(null)
+http('/banner?type=2').then((res) => {
+  console.log(res)
+  a.value = res.data.banners
+})
 
 const app = useAppStore()
 const theme = useThemeStore()

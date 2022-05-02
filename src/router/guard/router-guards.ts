@@ -18,20 +18,20 @@ export function createRouterGuards(router: Router) {
     // })
     // 权限路由已经加载，仍然未找到，重定向到not-found
     if (to.name === routeName(PAGE_NOT_FOUND_PAGE_NAME)) {
-      console.log(to.name)
-
       next({ name: routeName(PAGE_NOT_FOUND_NAME), replace: true })
       return false
     }
-    console.log(router.getRoutes())
     next()
     if (whitePathList.includes(to.path)) {
       next()
       return
     }
   })
-  router.afterEach(async (to: any, _, failure) => {
+  // router.afterEach(async (to: any, _, failure) => {
+  //   useTitle(to.meta.title)
+  //   console.log(failure)
+  // })
+  router.afterEach(async (to: any, _) => {
     useTitle(to.meta.title)
-    console.log(failure)
   })
 }

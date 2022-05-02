@@ -19,6 +19,8 @@ declare module 'vue' {
     DrawerButton: typeof import('./../src/layout/components/theme-setting/drawer-button/index.vue')['default']
     DrawerContent: typeof import('./../src/layout/components/theme-setting/drawer-content/index.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElCarousel: typeof import('element-plus/es')['ElCarousel']
+    ElCarouselItem: typeof import('element-plus/es')['ElCarouselItem']
     ElCol: typeof import('element-plus/es')['ElCol']
     ElDivider: typeof import('element-plus/es')['ElDivider']
     ElDrawer: typeof import('element-plus/es')['ElDrawer']
