@@ -211,6 +211,7 @@ declare namespace Theme {
     mixCollapsedWidth: number
     /** vertical-mix模式下侧边栏的子菜单的宽度 */
     mixChildMenuWidth: number
+    fixedSider: boolean
   }
 
   /** 菜单样式 */

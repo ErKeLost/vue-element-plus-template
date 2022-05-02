@@ -36,7 +36,7 @@
     </setting-menu>
     <setting-menu label="固定Sider">
       <el-switch
-        v-model="theme.fixedHeaderAndTab"
+        v-model="theme.sider.fixedSider"
         active-text="开启"
         inline-prompt
         inactive-text="关闭"
@@ -44,7 +44,7 @@
     </setting-menu>
     <setting-menu label="固定Footer">
       <el-switch
-        v-model="theme.fixedHeaderAndTab"
+        v-model="theme.footer.fixed"
         active-text="开启"
         inline-prompt
         inactive-text="关闭"
