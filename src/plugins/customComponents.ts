@@ -1,6 +1,5 @@
 import { App } from 'vue'
 import AdnyLayout from '@erkelost/layout'
-console.log(AdnyLayout)
 
 /**
  * 全局注册自定义组件 待完善

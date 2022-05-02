@@ -18,12 +18,9 @@ export function createRouterGuards(router: Router) {
     // })
     // 权限路由已经加载，仍然未找到，重定向到not-found
     if (to.name === routeName(PAGE_NOT_FOUND_PAGE_NAME)) {
-      console.log(to.name)
-
       next({ name: routeName(PAGE_NOT_FOUND_NAME), replace: true })
       return false
     }
-    console.log(router.getRoutes())
     next()
     if (whitePathList.includes(to.path)) {
       next()
