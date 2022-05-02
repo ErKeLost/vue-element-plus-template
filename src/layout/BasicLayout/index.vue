@@ -68,26 +68,7 @@ import { useBasicLayout } from '@/composables'
 const app = useAppStore()
 const theme = useThemeStore()
 
-const { mode, siderVisible, siderWidth, siderCollapsedWidth } = useBasicLayout()
-const value1 = ref([
-  new Date(2000, 10, 10, 10, 10),
-  new Date(2000, 10, 11, 10, 10)
-])
-// do not use same name with ref
-const form = reactive({
-  name: '',
-  region: '',
-  date1: '',
-  date2: '',
-  delivery: false,
-  type: [],
-  resource: '',
-  desc: ''
-})
-
-const onSubmit = () => {
-  console.log('submit!')
-}
+const { mode, siderWidth, siderCollapsedWidth } = useBasicLayout()
 </script>
 
 <style>
