@@ -10,3 +10,17 @@ body,
 html.dark {
   background: #121212;
 }
+.el-button--primary,
+.el-button--primary.is-plain {
+  --el-button-active-bg-color: var(--el-color-primary) !important;
+  --el-button-active-border-color: var(--el-color-primary) !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color:  #fff;
+}
+::-webkit-scrollbar-thumb {
+  background-color:  var(--el-color-primary);
+  border-radius: 6px;
+}
