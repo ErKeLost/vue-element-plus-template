@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { getThemeSettings } from './helpers'
-
+import { useAppStore } from '../app'
 type ThemeState = Theme.Setting
 
 export const useThemeStore = defineStore('theme-store', {
@@ -34,6 +34,11 @@ export const useThemeStore = defineStore('theme-store', {
     },
     /** 设置布局模式 */
     setLayoutMode(mode: EnumType.ThemeLayoutMode) {
+      console.log(mode)
+      const app = useAppStore()
+      if (mode === 'vertical-mix') {
+        app.setSiderCollapse(true)
+      }
       this.layout.mode = mode
     },
     /** 设置侧边栏反转色 */

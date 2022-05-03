@@ -10,7 +10,7 @@
     :footer-visible="theme.footer.visible"
     :sider-visible="theme.sider.visible"
     :sider-width="siderWidth"
-    :sider-collapsed-width="siderCollapsedWidth"
+    :sider-collapsed-width="theme.sider.collapsedWidth"
     :sider-collapse="app.siderCollapse"
     :fixed-footer="theme.footer.fixed"
     :fixed-sider="theme.sider.fixedSider"
