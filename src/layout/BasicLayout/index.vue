@@ -29,55 +29,7 @@
     <template #footer>
       <div class="flex-center h-full bg-[#bfa]">Footer</div>
     </template>
-    <el-row class="mb-4">
-      <el-button>Default</el-button>
-      <el-button type="primary">Primary</el-button>
-      <el-button type="success">Success</el-button>
-      <el-button type="info">Info</el-button>
-      <el-button type="warning">Warning</el-button>
-      <el-button type="danger">Danger</el-button>
-      <el-button>中文</el-button>
-    </el-row>
-
-    <el-row class="mb-4">
-      <el-button plain>Plain</el-button>
-      <el-button type="primary" plain>Primary</el-button>
-      <el-button type="success" plain>Success</el-button>
-      <el-button type="info" plain>Info</el-button>
-      <el-button type="warning" plain>Warning</el-button>
-      <el-button type="danger" plain>Danger</el-button>
-    </el-row>
-
-    <el-row class="mb-4">
-      <el-button round>Round</el-button>
-      <el-button type="primary" round>Primary</el-button>
-      <el-button type="success" round>Success</el-button>
-      <el-button type="info" round>Info</el-button>
-      <el-button type="warning" round>Warning</el-button>
-      <el-button type="danger" round>Danger</el-button>
-    </el-row>
-    <el-carousel
-      :initial-index="5"
-      :interval="40000"
-      type="card"
-      height="400px"
-    >
-      <el-carousel-item v-for="item in a" :key="item">
-        <img :src="item.pic" />
-      </el-carousel-item>
-    </el-carousel>
-    <el-select v-model="value" class="m-2" placeholder="Select" size="large">
-      <el-option
-        v-for="item in a"
-        :key="item.value"
-        :label="item.label"
-        :value="item.pic"
-      >
-        <img :src="item.pic" alt="" />
-      </el-option>
-    </el-select>
-    <el-button plain @click="open1"> Closes automatically </el-button>
-    <div v-for="i in 100" :key="i">{{ i }}</div>
+    <ContentLayout />
   </adny-layout>
   <ThemeSetting />
 </template>
@@ -85,28 +37,10 @@
 <script setup lang="ts">
 import { useAppStore, useThemeStore } from '@/store'
 import { useBasicLayout } from '@/composables'
-// import { createAxios } from '@erkelost/axios-ext'
-const value = ref('')
-// const http = createAxios({
-//   baseURL: '/api',
-//   timeout: 5000
-// })
-const a = ref<any>(null)
-// http('/banner?type=2').then((res) => {
-//   console.log(res)
-//   // a.value = res.data.banners
-// })
-
 const app = useAppStore()
 const theme = useThemeStore()
 
 const { mode, siderWidth, siderCollapsedWidth } = useBasicLayout()
-const open1 = () => {
-  ElNotification({
-    title: 'Title',
-    message: h('img', { src: a.value[0].pic })
-  })
-}
 </script>
 
 <style scoped>

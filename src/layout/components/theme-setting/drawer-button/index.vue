@@ -7,13 +7,14 @@
     z-10000
     w-42px
     p-0
-    duration-250
     transition-all
     @click="app.toggleSettingDrawerVisible"
     :class="[{ '!right-350px': app.settingDrawerVisible }]"
   >
     <CarbonClose v-if="app.settingDrawerVisible" text-2xl />
-    <CarbonSettings v-else text-2xl />
+    <el-icon v-else class="size is-loading">
+      <CarbonSettings />
+    </el-icon>
   </el-button>
 </template>
 <script lang="ts" setup>
@@ -24,5 +25,9 @@ const app = useAppStore()
 <style scoped>
 .el-button {
   height: 42px !important;
+}
+.size {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 </style>

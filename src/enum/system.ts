@@ -32,5 +32,13 @@ export enum EnumThemeAnimateMode {
   'fade-slide' = '滑动',
   'fade' = '消退',
   'fade-bottom' = '底部消退',
-  'fade-scale' = '缩放消退'
+  'fade-scale' = '缩放消退',
+  'bounceInUp' = '由内向上',
+  'bounceInDown' = '由内向下',
+  'bounceInLeft' = '由内向左',
+  'bounceInRight' = '由内向右',
+  'backInRight' = '向右返回弹跳',
+  'backInLeft' = '向左返回弹跳',
+  'backInDown' = '向下返回弹跳',
+  'backInUp' = '向上返回弹跳'
 }

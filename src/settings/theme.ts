@@ -111,7 +111,15 @@ const defaultThemeSetting: Theme.Setting = {
       { value: 'fade-bottom', label: EnumThemeAnimateMode['fade-bottom'] },
       { value: 'fade-scale', label: EnumThemeAnimateMode['fade-scale'] },
       { value: 'zoom-fade', label: EnumThemeAnimateMode['zoom-fade'] },
-      { value: 'zoom-out', label: EnumThemeAnimateMode['zoom-out'] }
+      { value: 'zoom-out', label: EnumThemeAnimateMode['zoom-out'] },
+      { value: 'bounceInUp', label: EnumThemeAnimateMode['bounceInUp'] },
+      { value: 'bounceInDown', label: EnumThemeAnimateMode['bounceInDown'] },
+      { value: 'bounceInLeft', label: EnumThemeAnimateMode['bounceInLeft'] },
+      { value: 'bounceInRight', label: EnumThemeAnimateMode['bounceInRight'] },
+      { value: 'backInRight', label: EnumThemeAnimateMode['backInRight'] },
+      { value: 'backInLeft', label: EnumThemeAnimateMode['backInLeft'] },
+      { value: 'backInDown', label: EnumThemeAnimateMode['backInDown'] },
+      { value: 'backInUp', label: EnumThemeAnimateMode['backInUp'] }
     ]
   }
 }

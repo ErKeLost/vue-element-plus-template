@@ -96,9 +96,9 @@
       />
     </setting-menu>
     <setting-menu label="页面切换动画类型">
-      <el-select v-model="value" placeholder="Select">
+      <el-select v-model="theme.page.animateMode" placeholder="Select">
         <el-option
-          v-for="item in options"
+          v-for="item in theme.page.animateModeList"
           :key="item.value"
           :label="item.label"
           :value="item.value"
