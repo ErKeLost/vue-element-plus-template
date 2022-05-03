@@ -22,14 +22,12 @@
       <div class="flex-center h-full bg-[#fba]">Tab</div>
     </template>
     <template #sider>
-      <div style="overflow-y: auto" class="h-full bg-[#fab] whitespace-nowrap">
-        <div v-for="i in 100" :key="i">{{ i }}</div>
-      </div>
+      <GlobalSider />
     </template>
     <template #footer>
       <div class="flex-center h-full bg-[#bfa]">Footer</div>
     </template>
-    <ContentLayout />
+    <GlobalContent />
   </adny-layout>
   <ThemeSetting />
 </template>
