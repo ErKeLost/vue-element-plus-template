@@ -35,6 +35,7 @@ declare module 'vue' {
     GlobalLayout: typeof import('./../src/layout/components/theme-setting/drawer-content/global-layout/index.vue')['default']
     GlobalTheme: typeof import('./../src/layout/components/theme-setting/drawer-content/global-theme/index.vue')['default']
     IcBaselineWbSunny: typeof import('./../src/components/Icon/IcBaselineWbSunny.vue')['default']
+    IconCustomSign: typeof import('~icons/custom/sign')['default']
     IconIcOutlineCheck: typeof import('~icons/ic/outline-check')['default']
     LayoutCheckBox: typeof import('./../src/layout/components/theme-setting/drawer-content/global-layout/components/LayoutCheckBox.vue')['default']
     Login: typeof import('./../src/views/login/index.vue')['default']
