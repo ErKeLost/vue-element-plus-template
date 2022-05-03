@@ -38,8 +38,7 @@
   </el-menu>
 </template>
 <script setup lang="ts">
-import { useAppStore, useThemeStore } from '@/store'
-const theme = useThemeStore()
+import { useAppStore } from '@/store'
 const app = useAppStore()
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)

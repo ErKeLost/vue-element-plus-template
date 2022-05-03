@@ -71,7 +71,7 @@
       <el-input-number size="small" v-model="theme.sider.width" />
     </setting-menu>
     <setting-menu label="Sider折叠之后的宽度">
-      <el-input-number size="small" v-model="theme.sider.mixCollapsedWidth" />
+      <el-input-number size="small" v-model="theme.sider.collapsedWidth" />
     </setting-menu>
     <el-divider title-placement="center">界面展示</el-divider>
     <setting-menu label="面包屑">
@@ -114,30 +114,7 @@
 <script lang="ts" setup>
 import { useThemeStore } from '@/store'
 
-const value = ref('')
 const theme = useThemeStore()
-const options = [
-  {
-    value: 'Option1',
-    label: 'Option1'
-  },
-  {
-    value: 'Option2',
-    label: 'Option2'
-  },
-  {
-    value: 'Option3',
-    label: 'Option3'
-  },
-  {
-    value: 'Option4',
-    label: 'Option4'
-  },
-  {
-    value: 'Option5',
-    label: 'Option5'
-  }
-]
 </script>
 <style scoped lang="scss">
 :deep(.el-switch__core) {
