@@ -1,7 +1,4 @@
 <template>
-  <el-button @click="app.setSiderCollapse(!app.siderCollapse)"
-    >我是按钮</el-button
-  >
   <el-menu
     default-active="2"
     class="el-menu-vertical-demo"

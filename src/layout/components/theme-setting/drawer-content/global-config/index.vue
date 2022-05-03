@@ -62,13 +62,16 @@
       <el-input-number size="small" v-model="theme.header.height" />
     </setting-menu>
     <setting-menu label="Tab高度">
-      <el-input-number size="small" v-model="theme.header.height" />
+      <el-input-number size="small" v-model="theme.tab.height" />
     </setting-menu>
     <setting-menu label="Footer高度">
-      <el-input-number size="small" v-model="theme.header.height" />
+      <el-input-number size="small" v-model="theme.footer.height" />
     </setting-menu>
     <setting-menu label="Sider宽度">
-      <el-input-number size="small" v-model="theme.header.height" />
+      <el-input-number size="small" v-model="theme.sider.width" />
+    </setting-menu>
+    <setting-menu label="Sider折叠之后的宽度">
+      <el-input-number size="small" v-model="theme.sider.mixCollapsedWidth" />
     </setting-menu>
     <el-divider title-placement="center">界面展示</el-divider>
     <setting-menu label="面包屑">
@@ -89,7 +92,7 @@
     </setting-menu>
     <setting-menu label="页面切换动画">
       <el-switch
-        v-model="theme.fixedHeaderAndTab"
+        v-model="theme.page.animate"
         active-text="开启"
         inline-prompt
         inactive-text="关闭"

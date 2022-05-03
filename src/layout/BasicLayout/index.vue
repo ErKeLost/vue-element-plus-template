@@ -16,7 +16,11 @@
     :fixed-sider="theme.sider.fixedSider"
   >
     <template #header>
-      <div text-red class="flex-center h-full bg-[#abf]">Header</div>
+      <div text-red class="flex-center h-full bg-[#abf]">
+        <el-button @click="app.setSiderCollapse(!app.siderCollapse)"
+          >我是按钮</el-button
+        >
+      </div>
     </template>
     <template #tab>
       <div class="flex-center h-full bg-[#fba]">Tab</div>
