@@ -7,10 +7,6 @@ import '@erkelost/colorpicker/dist/style.css'
 import { setupRouter } from '@/router'
 import { setupStore } from '@/store'
 import { setupCustomComponents } from '@/plugins'
-// import AdnyLayout from '@erkelost/layout'
-// const app = createApp(App)
-// app.component('AdnyLayout', AdnyLayout)
-// app.mount('#app')
 async function bootStrap() {
   const app = createApp(App)
   // 注册全局常用的 组件

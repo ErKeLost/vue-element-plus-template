@@ -14,6 +14,8 @@
       />
     </el-col>
   </el-row>
+  <el-divider title-placement="center">其他颜色</el-divider>
+  <DColorPicker />
 </template>
 <script lang="ts" setup>
 import { useThemeStore } from '@/store'

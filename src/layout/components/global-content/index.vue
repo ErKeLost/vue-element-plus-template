@@ -2,8 +2,6 @@
   <div
     class="h-full bg-[#f6f9f8] dark:bg-[#101014] transition duration-300 ease-in-out"
   >
-    <DColorPicker></DColorPicker>
-
     <router-view v-slot="{ Component, route }">
       <transition
         :name="theme.page.animate ? theme.page.animateMode : undefined"
