@@ -15,7 +15,6 @@
     </el-col>
   </el-row>
   <el-divider title-placement="center">其他颜色</el-divider>
-  {{ theme.themeColor }}
   <DColorPicker v-model="theme.themeColor" />
 </template>
 <script lang="ts" setup>
