@@ -13,6 +13,7 @@
       <GlobalTheme />
       <GlobalConfig />
     </div>
+    <GlobalCopy />
   </el-drawer>
 </template>
 
