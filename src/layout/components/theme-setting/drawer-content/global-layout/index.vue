@@ -21,6 +21,15 @@
       @click="theme.setLayoutMode(item.value)"
     />
   </el-space>
+  <!-- <Teleport to="body"> -->
+  <!-- </Teleport> -->
+  <el-button type="text" @click="dialogVisible = true"
+    >click to open the Dialog</el-button
+  >
+
+  <el-dialog v-model="dialogVisible" title="Tips" width="30%">
+    <DColorPicker></DColorPicker>
+  </el-dialog>
 </template>
 
 <script setup lang="ts">
@@ -28,8 +37,13 @@ import { useThemeStore } from '@/store'
 import sunIcon from '@/assets/svg/sun.svg?component'
 import moonIcon from '@/assets/svg/moon.svg?component'
 const theme = useThemeStore()
+const dialogVisible = ref(false)
 </script>
 <style scoped lang="scss">
+.div {
+  position: relative;
+  z-index: 99999999 !important;
+}
 :deep(.el-switch__core) {
   transform: scale(1.3);
   width: 3.5rem !important;

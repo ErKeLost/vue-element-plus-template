@@ -38,7 +38,7 @@ import { useBasicLayout } from '@/composables'
 const app = useAppStore()
 const theme = useThemeStore()
 
-const { mode, siderWidth, siderCollapsedWidth } = useBasicLayout()
+const { mode, siderWidth } = useBasicLayout()
 </script>
 
 <style scoped>

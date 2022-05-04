@@ -5,6 +5,7 @@ specifiers:
   '@commitlint/config-conventional': ^16.2.1
   '@ctrl/tinycolor': ^3.4.1
   '@erkelost/axios-ext': ^1.0.5
+  '@erkelost/colorpicker': ^1.0.6
   '@erkelost/layout': ^2.3.7
   '@iconify/json': ^2.1.26
   '@types/lodash-es': ^4.17.6
@@ -60,6 +61,7 @@ specifiers:
 dependencies:
   '@ctrl/tinycolor': 3.4.1
   '@erkelost/axios-ext': 1.0.5_axios@0.27.2
+  '@erkelost/colorpicker': 1.0.6_vue@3.2.33
   '@erkelost/layout': 2.3.7_vue@3.2.33
   '@vueuse/core': 8.2.6_vue@3.2.33
   animate.css: 4.1.1
@@ -642,6 +644,21 @@ packages:
     dependencies:
       '@erkelost/axios-ext-utils': 1.0.5
       axios: 0.27.2
+    dev: false
+
+  /@erkelost/colorpicker/1.0.6_vue@3.2.33:
+    resolution: {integrity: sha512-C8ccai+78axk35lHzi3ZBRZTX+OuA4MbsGPLzUUfd3zCSnStFQN7901KnaE3/nZRulAN+Yo/8yNowWhsRZKXow==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.6
+      vue: ^2.0.0 || >=3.0.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      async-validator: 4.1.1
+      lodash: 4.17.21
+      vue: 3.2.33
+      vue-demi: 0.12.5_vue@3.2.33
     dev: false
 
   /@erkelost/layout/2.3.7_vue@3.2.33:

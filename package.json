@@ -20,6 +20,7 @@
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.1",
     "@erkelost/axios-ext": "^1.0.5",
+    "@erkelost/colorpicker": "^1.0.6",
     "@erkelost/layout": "^2.3.7",
     "@vueuse/core": "^8.2.5",
     "animate.css": "^4.1.1",
