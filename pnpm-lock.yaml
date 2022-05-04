@@ -7,6 +7,7 @@ specifiers:
   '@erkelost/axios-ext': ^1.0.5
   '@erkelost/colorpicker': ^1.0.6
   '@erkelost/layout': ^2.3.7
+  '@erkelost/utils': ^1.0.1
   '@iconify/json': ^2.1.26
   '@types/lodash-es': ^4.17.6
   '@types/node': ^17.0.23
@@ -63,6 +64,7 @@ dependencies:
   '@erkelost/axios-ext': 1.0.5_axios@0.27.2
   '@erkelost/colorpicker': 1.0.6_vue@3.2.33
   '@erkelost/layout': 2.3.7_vue@3.2.33
+  '@erkelost/utils': 1.0.1_vue@3.2.33
   '@vueuse/core': 8.2.6_vue@3.2.33
   animate.css: 4.1.1
   axios: 0.27.2
@@ -673,6 +675,16 @@ packages:
       css-render: 0.15.9
       vue: 3.2.33
       vue-demi: 0.12.5_vue@3.2.33
+    dev: false
+
+  /@erkelost/utils/1.0.1_vue@3.2.33:
+    resolution: {integrity: sha512-TmxDlzbDbIAnav2kPU1YXIscSMUjLta3jVWqVodoKiw9nGObytU7yx/0NiV+zIJTIkuKPAh28aOCfcS9VO+i1g==}
+    dependencies:
+      '@vueuse/core': 7.7.1_vue@3.2.33
+      dayjs: 1.11.1
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
     dev: false
 
   /@eslint/eslintrc/1.2.2:
@@ -1300,6 +1312,22 @@ packages:
   /@vue/shared/3.2.33:
     resolution: {integrity: sha512-UBc1Pg1T3yZ97vsA2ueER0F6GbJebLHYlEi4ou1H5YL4KWvMOOWwpYo9/QpWq93wxKG6Wo13IY74Hcn/f7c7Bg==}
 
+  /@vueuse/core/7.7.1_vue@3.2.33:
+    resolution: {integrity: sha512-PRRgbATMpoeUmkCEBtUeJgOwtew8s+4UsEd+Pm7MhkjL2ihCNrSqxNVtM6NFE4uP2sWnkGcZpCjPuNSxowJ1Ow==}
+    peerDependencies:
+      '@vue/composition-api': ^1.1.0
+      vue: ^2.6.0 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue:
+        optional: true
+    dependencies:
+      '@vueuse/shared': 7.7.1_vue@3.2.33
+      vue: 3.2.33
+      vue-demi: 0.12.5_vue@3.2.33
+    dev: false
+
   /@vueuse/core/8.2.6_vue@3.2.33:
     resolution: {integrity: sha512-fzlpM3B5oVe+UhCT1mXlhG1Zxdq2lq1Z2AvddSB8+RxrsSFzII7DKfsQEz8Vop7Lzc++4m8drTNbhPovYoFqHw==}
     peerDependencies:
@@ -1319,6 +1347,21 @@ packages:
 
   /@vueuse/metadata/8.2.6:
     resolution: {integrity: sha512-OBKtafCt+4RcEJlYDCjp1vl65pBCL2g4TmipEtdZ8/qphKlW6nakJbkY7XRN5grPmjqU99/ahJGtyGk5NHS2hw==}
+    dev: false
+
+  /@vueuse/shared/7.7.1_vue@3.2.33:
+    resolution: {integrity: sha512-rN2qd22AUl7VdBxihagWyhUNHCyVk9IpvBTTfHoLH9G7rGE552X1f+zeCfehuno0zXif13jPw+icW/wn2a0rnQ==}
+    peerDependencies:
+      '@vue/composition-api': ^1.1.0
+      vue: ^2.6.0 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue:
+        optional: true
+    dependencies:
+      vue: 3.2.33
+      vue-demi: 0.12.5_vue@3.2.33
     dev: false
 
   /@vueuse/shared/8.2.6_vue@3.2.33:
