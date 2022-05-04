@@ -10,11 +10,12 @@
       <color-checkbox
         :color="color"
         :checked="color === theme.themeColor"
-        @click="setThemeColor(color)"
+        @click="theme.setThemeColor(color)"
       />
     </el-col>
   </el-row>
   <el-divider title-placement="center">其他颜色</el-divider>
+  {{ theme.themeColor }}
   <DColorPicker v-model="theme.themeColor" />
 </template>
 <script lang="ts" setup>
@@ -26,9 +27,9 @@ import {
 } from '../../theme-color/element-plus'
 const body = document.documentElement as HTMLElement
 const theme = useThemeStore()
-const setThemeColor = (color: string) => {
-  setEpThemeColor(color)
-}
+// const setThemeColor = (color: string) => {
+//   setEpThemeColor(color)
+// }
 const setEpThemeColor = (color: string) => {
   // @ts-expect-error
   writeNewStyle(createNewStyle(color))
