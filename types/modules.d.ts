@@ -14,3 +14,6 @@ declare module 'css-color-function' {
 declare module '@erkelost/colorpicker' {
   export { ColorPicker }
 }
+declare module '@erkelost/utils' {
+  export { HexToRGBA }
+}

@@ -34,7 +34,6 @@ export const useThemeStore = defineStore('theme-store', {
     },
     /** 设置布局模式 */
     setLayoutMode(mode: EnumType.ThemeLayoutMode) {
-      console.log(mode)
       const app = useAppStore()
       if (mode === 'vertical-mix') {
         app.setSiderCollapse(true)

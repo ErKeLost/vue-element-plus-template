@@ -79,9 +79,6 @@ const getStyleTemplate = (data: any): Record<string, any> => {
 
 // 自动计算hover和active颜色 https://element-plus.gitee.io/zh-CN/component/button.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A2%9C%E8%89%B2-%E6%B5%8B%E8%AF%95%E7%89%88
 export const shadeBgColor = (color: string): string => {
-  console.log(color)
-  console.log(HexToRGBA(color))
   const obj = HexToRGBA(color)
-  console.log(`rgb(${obj.r},${obj.g},${obj.b})`)
   return `rgb(${obj.r},${obj.g},${obj.b})`
 }
