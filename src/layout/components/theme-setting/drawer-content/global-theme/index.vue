@@ -15,7 +15,7 @@
     </el-col>
   </el-row>
   <el-divider title-placement="center">其他颜色</el-divider>
-  <DColorPicker />
+  <DColorPicker v-model="theme.themeColor" />
 </template>
 <script lang="ts" setup>
 import { useThemeStore } from '@/store'
@@ -35,4 +35,10 @@ const setEpThemeColor = (color: string) => {
   // useEpThemeStoreHook().setEpThemeColor(color)
   body.style.setProperty('--el-color-primary-active', shadeBgColor(color))
 }
+watch(
+  () => theme.themeColor,
+  () => {
+    setEpThemeColor(theme.themeColor)
+  }
+)
 </script>
