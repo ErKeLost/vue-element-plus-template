@@ -12,10 +12,13 @@
   </div>
 </template>
 <script lang="ts" setup></script>
-<style scoped>
+<style scoped lang="scss">
 .setting {
   font-size: 1rem;
   padding: 0.3rem 0;
   letter-spacing: 0.2rem;
+}
+:deep(.el-button + .el-button) {
+  margin-left: 0;
 }
 </style>
