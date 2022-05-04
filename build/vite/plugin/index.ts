@@ -2,7 +2,7 @@ import type { Plugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
 // import viteEslint from 'vite-plugin-eslint'
 import VueJsx from '@vitejs/plugin-vue-jsx'
-import legacy from '@vitejs/plugin-legacy'
+// import legacy from '@vitejs/plugin-legacy'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Icons from 'unplugin-icons/vite'
@@ -38,10 +38,10 @@ export function createVitePlugins(viteEnv: ImportMetaEnv, isBuild: boolean) {
     // viteEslint(), // 又bug
     PkgConfig(),
     // vite need esm browser ? i dont test this plugin  // 2022 . 3 . 12
-    legacy({
-      targets: ['ie >= 11'],
-      additionalLegacyPolyfills: ['regenerator-runtime/runtime']
-    }),
+    // legacy({
+    //   targets: ['ie >= 11'],
+    //   additionalLegacyPolyfills: ['regenerator-runtime/runtime']
+    // }),
     Unocss(),
     svgLoader(),
     GlobPlugin(),

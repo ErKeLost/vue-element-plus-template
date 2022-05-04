@@ -15,5 +15,5 @@ declare module '@erkelost/colorpicker' {
   export { ColorPicker }
 }
 declare module '@erkelost/utils' {
-  export { HexToRGBA }
+  export { HexToRGBA, RGBtoHex, RGBAtoHex }
 }

@@ -1,8 +1,7 @@
 /* 动态改变element-plus主题色 */
-import rgbHex from 'rgb-hex'
 import epCss from './element.scss'
 import { convert } from 'css-color-function'
-import { HexToRGBA } from '@erkelost/utils'
+import { HexToRGBA, RGBAtoHex } from '@erkelost/utils'
 // 色值表
 const formula: any = {
   'shade-1': 'color(primary shade(10%))',
@@ -51,7 +50,17 @@ export const createColors = (
   }
   Object.keys(formula).forEach((key) => {
     const value = formula[key].replace(/primary/, primary)
-    colors[key] = '#' + rgbHex(convert(value))
+    const valueColorArr = convert(value)
+      .replace(/\'/g, '')
+      .match(/(?<=\().*(?=\))/g)[0]
+      .split(',')
+    const valueColorObj = {
+      r: valueColorArr[0],
+      g: valueColorArr[1],
+      b: valueColorArr[2],
+      a: 1
+    }
+    colors[key] = RGBAtoHex(valueColorObj)
   })
   return colors
 }
