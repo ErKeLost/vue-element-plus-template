@@ -21,6 +21,7 @@
     "@ctrl/tinycolor": "^3.4.1",
     "@erkelost/axios-ext": "^1.0.5",
     "@erkelost/layout": "^2.3.7",
+    "@erkelost/colorpicker": "^1.0.6",
     "@vueuse/core": "^8.2.5",
     "animate.css": "^4.1.1",
     "axios": "^0.27.2",
@@ -37,7 +38,6 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
-    "@erkelost/colorpicker": "^1.0.6",
     "@commitlint/config-conventional": "^16.2.1",
     "@iconify/json": "^2.1.26",
     "@types/lodash-es": "^4.17.6",

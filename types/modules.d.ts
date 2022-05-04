@@ -11,3 +11,6 @@ declare module 'virtual:*' {
 declare module 'css-color-function' {
   export { convert }
 }
+declare module '@erkelost/colorpicker' {
+  export { ColorPicker }
+}
