@@ -55,6 +55,7 @@ declare module 'vue' {
     Redirect: typeof import('./../src/views/redirect/index.vue')['default']
     SettingMenu: typeof import('./../src/components/SettingMenu/index.vue')['default']
     ThemeSetting: typeof import('./../src/layout/components/theme-setting/index.vue')['default']
+    UserManagement: typeof import('./../src/views/companyManagement/userManagement/index.vue')['default']
   }
 }
 
