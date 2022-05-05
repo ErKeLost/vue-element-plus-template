@@ -68,7 +68,8 @@ const defaultThemeSetting: Theme.Setting = {
   tab: {
     visible: true,
     height: 44,
-    isCache: true
+    isCache: true,
+    tabMoveable: true
   },
   sider: {
     visible: true,

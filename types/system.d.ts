@@ -184,6 +184,7 @@ declare namespace Theme {
     height: number
     /** 开启多页签缓存 */
     isCache: boolean
+    tabMoveable: boolean
   }
 
   /** 多页签风格列表 */

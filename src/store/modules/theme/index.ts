@@ -48,6 +48,9 @@ export const useThemeStore = defineStore('theme-store', {
     setHeaderInverted(isInverted: boolean) {
       this.header.inverted = isInverted
     },
+    setTabMoveable(isMoveable: boolean) {
+      this.tab.tabMoveable = isMoveable
+    },
     /** 设置系统主题颜色 */
     setThemeColor(themeColor: string) {
       this.themeColor = themeColor
