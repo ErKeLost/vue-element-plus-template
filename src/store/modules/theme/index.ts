@@ -84,10 +84,6 @@ export const useThemeStore = defineStore('theme-store', {
         this.tab.height = height
       }
     },
-    /** 设置多页签风格 */
-    setTabMode(mode: EnumType.ThemeTabMode) {
-      this.tab.mode = mode
-    },
     /** 设置多页签缓存 */
     setTabIsCache(isCache: boolean) {
       this.tab.isCache = isCache

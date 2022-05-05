@@ -1,6 +1,5 @@
 import {
   EnumThemeLayoutMode,
-  EnumThemeTabMode,
   EnumThemeHorizontalMenuPosition,
   EnumThemeAnimateMode
 } from '@/enum'
@@ -37,7 +36,7 @@ const defaultThemeSetting: Theme.Setting = {
   followSystemTheme: true,
   darkMode: false,
   layout: {
-    minWidth: 900,
+    minWidth: 1200,
     mode: 'vertical',
     modeList: [
       { value: 'vertical', label: EnumThemeLayoutMode.vertical },
@@ -69,11 +68,6 @@ const defaultThemeSetting: Theme.Setting = {
   tab: {
     visible: true,
     height: 44,
-    mode: 'chrome',
-    modeList: [
-      { value: 'chrome', label: EnumThemeTabMode.chrome },
-      { value: 'button', label: EnumThemeTabMode.button }
-    ],
     isCache: true
   },
   sider: {

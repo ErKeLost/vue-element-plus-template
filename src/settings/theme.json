@@ -71,17 +71,6 @@
   "tab": {
     "visible": true,
     "height": 44,
-    "mode": "chrome",
-    "modeList": [
-      {
-        "value": "chrome",
-        "label": "谷歌风格"
-      },
-      {
-        "value": "button",
-        "label": "按钮风格"
-      }
-    ],
     "isCache": true
   },
   "sider": {
