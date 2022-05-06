@@ -4,8 +4,8 @@ specifiers:
   '@commitlint/cli': ^16.2.3
   '@commitlint/config-conventional': ^16.2.1
   '@erkelost/axios-ext': ^1.0.5
-  '@erkelost/colorpicker': ^1.0.6
-  '@erkelost/layout': ^2.3.9
+  '@erkelost/colorpicker': ^1.0.8
+  '@erkelost/layout': ^2.5.1
   '@erkelost/utils': ^1.0.2
   '@iconify/json': ^2.1.26
   '@types/lodash-es': ^4.17.6
@@ -60,8 +60,8 @@ specifiers:
 
 dependencies:
   '@erkelost/axios-ext': 1.0.5_axios@0.27.2
-  '@erkelost/colorpicker': 1.0.6_vue@3.2.33
-  '@erkelost/layout': 2.3.9_vue@3.2.33
+  '@erkelost/colorpicker': 1.0.8_vue@3.2.33
+  '@erkelost/layout': 2.5.1_vue@3.2.33
   '@erkelost/utils': 1.0.2_vue@3.2.33
   '@vueuse/core': 8.4.0_vue@3.2.33
   animate.css: 4.1.1
@@ -647,8 +647,8 @@ packages:
       axios: 0.27.2
     dev: false
 
-  /@erkelost/colorpicker/1.0.6_vue@3.2.33:
-    resolution: {integrity: sha512-C8ccai+78axk35lHzi3ZBRZTX+OuA4MbsGPLzUUfd3zCSnStFQN7901KnaE3/nZRulAN+Yo/8yNowWhsRZKXow==}
+  /@erkelost/colorpicker/1.0.8_vue@3.2.33:
+    resolution: {integrity: sha512-XrC0uYL5PksLwjUSP4SYFG/5nAGGBvCbOLJZTm43qJ9XS34Trqqm9uXupOe0+gTA0Zit9XTIEjDRzIPa6T0wuA==}
     peerDependencies:
       '@vue/composition-api': ^1.4.6
       vue: ^2.0.0 || >=3.0.0
@@ -657,13 +657,12 @@ packages:
         optional: true
     dependencies:
       async-validator: 4.1.1
-      lodash: 4.17.21
       vue: 3.2.33
       vue-demi: 0.12.5_vue@3.2.33
     dev: false
 
-  /@erkelost/layout/2.3.9_vue@3.2.33:
-    resolution: {integrity: sha512-oryYQRa6hblXzRZ02WKGAS+lsxL/G5r1KMd8PHH6iTT+FW9faLtUSwjAIfgoRXyQLT76ioTlSytEN5EjOz+r7A==}
+  /@erkelost/layout/2.5.1_vue@3.2.33:
+    resolution: {integrity: sha512-8k9ir1v1UFM+mXK73HB2QWtT56YrsvQ2aBbxbzlGvHAfwUIfaIzv72bwBZMOh7BORMsXy+lGA5zL9KhR7L0Rig==}
     peerDependencies:
       '@vue/composition-api': ^1.4.6
       vue: ^2.0.0 || >=3.0.0
