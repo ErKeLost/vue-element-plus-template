@@ -37,7 +37,7 @@ const defaultThemeSetting: Theme.Setting = {
   darkMode: false,
   layout: {
     minWidth: 1200,
-    mode: 'vertical',
+    mode: import.meta.env.VITE_LAYOUT_MODE,
     modeList: [
       { value: 'vertical', label: EnumThemeLayoutMode.vertical },
       { value: 'vertical-mix', label: EnumThemeLayoutMode['vertical-mix'] },
@@ -45,7 +45,7 @@ const defaultThemeSetting: Theme.Setting = {
       { value: 'horizontal-mix', label: EnumThemeLayoutMode['horizontal-mix'] }
     ]
   },
-  themeColor: themeColorList[0],
+  themeColor: import.meta.env.VITE_THEME_COLOR,
   themeColorList,
   otherColor: {
     info: '#2080f0',
@@ -119,5 +119,9 @@ const defaultThemeSetting: Theme.Setting = {
   }
 }
 
+// chore layout setting change
+// export const themeSetting =
+//   (jsonSetting as Theme.Setting) || defaultThemeSetting
+
 export const themeSetting =
-  (jsonSetting as Theme.Setting) || defaultThemeSetting
+  defaultThemeSetting || (jsonSetting as Theme.Setting)

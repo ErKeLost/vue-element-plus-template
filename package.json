@@ -15,7 +15,9 @@
     "postinstall": "husky install",
     "commit": "cz",
     "prepare": "husky install",
-    "vite:force": "npx vite --force"
+    "vite:force": "npx vite --force",
+    "build:testa": "vue-tsc --noEmit && vite build --mode testa",
+    "build:testb": "vue-tsc --noEmit && vite build --mode testb"
   },
   "dependencies": {
     "@erkelost/axios-ext": "^1.0.5",

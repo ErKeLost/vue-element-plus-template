@@ -3,7 +3,7 @@
   "darkMode": false,
   "layout": {
     "minWidth": 900,
-    "mode": "vertical",
+    "mode": "horizontal",
     "modeList": [
       {
         "value": "vertical",
