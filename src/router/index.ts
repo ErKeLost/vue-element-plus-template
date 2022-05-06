@@ -6,7 +6,7 @@ import {
   RouteRecordRaw
   // RouteRecordRaw
 } from 'vue-router'
-// import { routes } from './modules'
+import { routes } from './modules'
 const { VITE_HASH_ROUTE = 'false', VITE_BASE_URL } = import.meta.env
 import WHITE_NAME_LIST from './routes/router-basic'
 // import { RedirectRoute } from '@/router/base'
@@ -24,10 +24,11 @@ const router = createRouter({
     VITE_HASH_ROUTE === 'false'
       ? createWebHashHistory(VITE_BASE_URL)
       : createWebHistory(VITE_BASE_URL),
-  routes: WHITE_NAME_LIST as unknown as RouteRecordRaw[],
+  routes: [...(WHITE_NAME_LIST as unknown as RouteRecordRaw[]), ...routes],
   strict: true,
   scrollBehavior: () => ({ left: 0, top: 0 })
 })
+console.log(router)
 
 export async function setupRouter(app: App) {
   app.use(router)
