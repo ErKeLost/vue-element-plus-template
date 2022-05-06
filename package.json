@@ -90,6 +90,7 @@
       "include": [
         "@vueuse/core",
         "nprogress",
+        "element-plus",
         "pinia",
         "vue",
         "vue-router"
