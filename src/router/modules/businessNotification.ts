@@ -3,7 +3,7 @@ const BasicLayout = () => import('@/layout/BasicLayout/index.vue')
 const BusinessNotification = {
   path: '/businessNotification',
   name: 'businessNotification',
-  redirect: '/businessNotification/index.vue',
+  redirect: '/businessNotification/index',
   component: BasicLayout,
   meta: {
     icon: '',

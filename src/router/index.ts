@@ -7,7 +7,7 @@ import {
   // RouteRecordRaw
 } from 'vue-router'
 import { routes } from './modules'
-const { VITE_HASH_ROUTE = 'false', VITE_BASE_URL } = import.meta.env
+
 import WHITE_NAME_LIST from './routes/router-basic'
 // import { RedirectRoute } from '@/router/base'
 // // import { PageEnum } from '@/enums/pageEnum'
@@ -18,8 +18,8 @@ import { createRouterGuards } from './guard/router-guards'
 
 // //普通路由 无需验证权限
 // export const constantRouter: any[] = [constantRoutes]
-console.log(WHITE_NAME_LIST)
 
+const { VITE_HASH_ROUTE = 'false', VITE_BASE_URL } = import.meta.env
 const router = createRouter({
   history:
     VITE_HASH_ROUTE === 'false'

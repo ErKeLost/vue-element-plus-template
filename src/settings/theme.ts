@@ -79,7 +79,7 @@ const defaultThemeSetting: Theme.Setting = {
     mixWidth: 80,
     mixCollapsedWidth: 48,
     mixChildMenuWidth: 200,
-    fixedSider: false
+    fixedSider: true
   },
   menu: {
     horizontalPosition: 'flex-start',
@@ -94,7 +94,7 @@ const defaultThemeSetting: Theme.Setting = {
   },
   footer: {
     visible: true,
-    fixed: false,
+    fixed: true,
     height: 48
   },
   page: {
