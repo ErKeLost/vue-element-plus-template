@@ -48,6 +48,9 @@ export const useThemeStore = defineStore('theme-store', {
     setHeaderInverted(isInverted: boolean) {
       this.header.inverted = isInverted
     },
+    setTabMoveable(isMoveable: boolean) {
+      this.tab.tabMoveable = isMoveable
+    },
     /** 设置系统主题颜色 */
     setThemeColor(themeColor: string) {
       this.themeColor = themeColor
@@ -83,10 +86,6 @@ export const useThemeStore = defineStore('theme-store', {
       if (height) {
         this.tab.height = height
       }
-    },
-    /** 设置多页签风格 */
-    setTabMode(mode: EnumType.ThemeTabMode) {
-      this.tab.mode = mode
     },
     /** 设置多页签缓存 */
     setTabIsCache(isCache: boolean) {

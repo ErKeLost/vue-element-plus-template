@@ -58,6 +58,14 @@
         inactive-text="关闭"
       />
     </setting-menu>
+    <setting-menu label="是否移动Tab栏布局">
+      <el-switch
+        v-model="theme.tab.tabMoveable"
+        active-text="开启"
+        inline-prompt
+        inactive-text="关闭"
+      />
+    </setting-menu>
     <setting-menu label="Header高度">
       <el-input-number size="small" v-model="theme.header.height" />
     </setting-menu>

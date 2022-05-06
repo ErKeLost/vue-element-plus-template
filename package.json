@@ -15,12 +15,14 @@
     "postinstall": "husky install",
     "commit": "cz",
     "prepare": "husky install",
-    "vite:force": "npx vite --force"
+    "vite:force": "npx vite --force",
+    "build:testa": "vue-tsc --noEmit && vite build --mode testa",
+    "build:testb": "vue-tsc --noEmit && vite build --mode testb"
   },
   "dependencies": {
     "@erkelost/axios-ext": "^1.0.5",
     "@erkelost/colorpicker": "^1.0.6",
-    "@erkelost/layout": "^2.3.7",
+    "@erkelost/layout": "^2.3.9",
     "@erkelost/utils": "^1.0.2",
     "@vueuse/core": "^8.2.5",
     "animate.css": "^4.1.1",
@@ -49,6 +51,7 @@
     "@vitejs/plugin-vue": "^2.3.0",
     "@vitejs/plugin-vue-jsx": "^1.3.9",
     "commitlint": "^16.2.3",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.0.0",
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",

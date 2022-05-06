@@ -14,6 +14,7 @@
     :sider-collapse="app.siderCollapse"
     :fixed-footer="theme.footer.fixed"
     :fixed-sider="theme.sider.fixedSider"
+    :tab-moveable="theme.tab.tabMoveable"
   >
     <template #header>
       <GlobalHeader />

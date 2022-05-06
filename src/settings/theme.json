@@ -3,7 +3,7 @@
   "darkMode": false,
   "layout": {
     "minWidth": 900,
-    "mode": "vertical",
+    "mode": "horizontal",
     "modeList": [
       {
         "value": "vertical",
@@ -71,18 +71,8 @@
   "tab": {
     "visible": true,
     "height": 44,
-    "mode": "chrome",
-    "modeList": [
-      {
-        "value": "chrome",
-        "label": "谷歌风格"
-      },
-      {
-        "value": "button",
-        "label": "按钮风格"
-      }
-    ],
-    "isCache": true
+    "isCache": true,
+    "tabMoveable": false
   },
   "sider": {
     "visible": true,
