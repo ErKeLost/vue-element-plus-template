@@ -24,6 +24,8 @@ declare module 'vue' {
     ElAlert: typeof import('element-plus/es')['ElAlert']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCol: typeof import('element-plus/es')['ElCol']
+    ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
+    ElDatePicker: typeof import('element-plus/es')['ElDatePicker']
     ElDivider: typeof import('element-plus/es')['ElDivider']
     ElDrawer: typeof import('element-plus/es')['ElDrawer']
     ElIcon: typeof import('element-plus/es')['ElIcon']

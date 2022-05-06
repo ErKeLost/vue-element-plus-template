@@ -1,11 +1,12 @@
 <template>
-  <router-view />
+  <el-config-provider :locale="zhCn">
+    <router-view />
+  </el-config-provider>
   <!-- <BasicLayout /> -->
 </template>
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { createAxios } from '@erkelost/axios-ext'
+import zhCn from 'element-plus/lib/locale/lang/zh-cn'
 import {
   shadeBgColor,
   writeNewStyle,
