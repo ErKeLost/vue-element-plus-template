@@ -36,7 +36,6 @@ export function createVitePlugins(viteEnv: ImportMetaEnv, isBuild: boolean) {
     Pages(),
     Inspect(), // 仅适用于开发模式
     // viteEslint(), // 又bug
-    PkgConfig(),
     // vite need esm browser ? i dont test this plugin  // 2022 . 3 . 12
     // legacy({
     //   targets: ['ie >= 11'],
@@ -119,6 +118,7 @@ export function createVitePlugins(viteEnv: ImportMetaEnv, isBuild: boolean) {
     //     ]
     //   }
     // }),
+    PkgConfig(),
     OptimizationPersist(),
     visualizer({
       // 打包完成后自动打开浏览器，显示产物体积报告
