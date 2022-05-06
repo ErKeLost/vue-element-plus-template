@@ -13,7 +13,7 @@ import { RouteRecordRaw } from 'vue-router'
 const constantRoutes: Array<RouteRecordRaw> = [
   {
     path: '/exception',
-    name: 'Exception',
+    name: 'exception',
     redirect: '/exception/403',
     component: () => import('@/layout/BlankLayout/index.vue'),
     meta: {

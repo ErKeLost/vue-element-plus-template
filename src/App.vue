@@ -5,18 +5,12 @@
   <!-- <BasicLayout /> -->
 </template>
 <script setup lang="ts">
-import { createAxios } from '@erkelost/axios-ext'
 import zhCn from 'element-plus/lib/locale/lang/zh-cn'
 import {
   shadeBgColor,
   writeNewStyle,
   createNewStyle
 } from '@/layout/components/theme-setting/theme-color/element-plus'
-const http = createAxios({
-  baseURL: '/api',
-  timeout: 5000
-})
-console.log(http)
 
 const body = document.documentElement as HTMLElement
 const setEpThemeColor = (color: string) => {

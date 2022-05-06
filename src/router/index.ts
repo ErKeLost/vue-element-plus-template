@@ -29,7 +29,7 @@ const router = createRouter({
   strict: true,
   scrollBehavior: () => ({ left: 0, top: 0 })
 })
-console.log(router)
+// console.log([...(WHITE_NAME_LIST as unknown as RouteRecordRaw[]), ...routes])
 
 export async function setupRouter(app: App) {
   app.use(router)
