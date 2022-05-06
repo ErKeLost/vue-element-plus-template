@@ -1,4 +1,5 @@
-const BasicLayout = import('@/layout/BasicLayout/index.vue')
+const BasicLayout = () => import('@/layout/BasicLayout/index.vue')
+
 const BusinessNotification = {
   path: '/businessNotification',
   name: 'businessNotification',

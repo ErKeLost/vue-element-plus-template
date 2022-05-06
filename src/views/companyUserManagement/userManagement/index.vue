@@ -1,2 +1,4 @@
-<template>公司用户管理</template>
+<template>
+  <div>公司用户管理</div>
+</template>
 <script setup lang="ts"></script>
