@@ -19,16 +19,6 @@
 
 <script setup lang="ts">
 import { useAppStore, useThemeStore } from '@/store'
-
-interface Props {
-  /** 显示padding */
-  showPadding?: boolean
-}
-
-withDefaults(defineProps<Props>(), {
-  showPadding: true
-})
-
 const app = useAppStore()
 const theme = useThemeStore()
 </script>
