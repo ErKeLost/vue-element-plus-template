@@ -18,6 +18,7 @@ import { createRouterGuards } from './guard/router-guards'
 
 // //普通路由 无需验证权限
 // export const constantRouter: any[] = [constantRoutes]
+console.log(WHITE_NAME_LIST)
 
 const router = createRouter({
   history:
