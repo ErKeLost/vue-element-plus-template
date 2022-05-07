@@ -98,11 +98,11 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       // }
     },
     define: viteDefine,
-    // optimizeDeps: {
-    //   // 按需加载的依赖都可以声明到这个数组里
-    //   // 配置为一个字符串数组，将 `lodash-es` 和 `vue`两个包强制进行预构建
-    //   include: ['@vueuse/core', 'vue', 'lodash-es', 'element-plus']
-    // },
+    optimizeDeps: {
+      // 按需加载的依赖都可以声明到这个数组里
+      // 配置为一个字符串数组，将 `lodash-es` 和 `vue`两个包强制进行预构建
+      include: ['@vueuse/core', 'vue', 'lodash-es']
+    },
     plugins: createVitePlugins(viteEnv, isBuild)
   }
 }
