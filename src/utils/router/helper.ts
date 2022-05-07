@@ -1,5 +1,4 @@
 import { RouteRecordRaw } from 'vue-router'
-import { AuthRoute } from '/#/route'
 import { getLayoutComponent, getViewComponent } from './component'
 
 export function transformAuthRoutesToVueRoutes(routes: AuthRoute.Route[]) {
@@ -130,5 +129,5 @@ function hasChildren(item: AuthRoute.Route) {
  * @param item - 权限路由
  */
 function isSingleRoute(item: AuthRoute.Route) {
-  return Boolean(item.meta.singleLayout)
+  return Boolean(item.meta?.singleLayout)
 }
