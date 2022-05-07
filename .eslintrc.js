@@ -35,6 +35,7 @@ module.exports = {
     'vue/valid-template-root': 'off',
     'vue/script-setup-uses-vars': 'error',
     'vue/multi-word-component-names': 'off',
+    'vue/v-on-event-hyphenation': 'off',
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
