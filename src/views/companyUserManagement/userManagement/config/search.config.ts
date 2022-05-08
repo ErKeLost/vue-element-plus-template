@@ -5,9 +5,9 @@ export const searchFormConfig: IFormConfig = {
   labelPosition: 'left',
   itemStyle: {
     // 不能跟 gutter 一起使用
-    // padding: '12px 20px 0px 0px'
+    padding: '12px 20px 12px 20px'
   },
-  gutter: 40,
+  // gutter: 50,
   operationLayout: {
     xl: 6,
     lg: 8,
