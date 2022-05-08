@@ -7,6 +7,7 @@
       placeholder="Select date and time"
     />
     <PageSearch :searchFormConfig="searchFormConfig"></PageSearch>
+    <PageTable />
   </div>
 </template>
 <script setup lang="ts">

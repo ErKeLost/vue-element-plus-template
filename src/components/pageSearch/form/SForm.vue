@@ -78,7 +78,6 @@ const props = withDefaults(defineProps<IForm>(), {
 const emit = defineEmits<{
   (e: 'update:modelValue', value: any): void
 }>()
-console.log(props)
 const formData = ref({ ...props.modelValue })
 watch(
   formData,

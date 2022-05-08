@@ -4,6 +4,7 @@
     <SForm v-bind="searchFormConfig" v-model="formData">
       <template #operation>
         <el-button @click="handleResetForm">清空条件</el-button>
+        <el-button type="success" @click="handleResetForm">新增用户</el-button>
         <el-button type="primary" @click="handleQueryClick">搜索</el-button>
       </template>
     </SForm>
