@@ -28,7 +28,7 @@
         </el-table-column>
       </template>
     </el-table>
-    <div>
+    <div flex justify-end>
       <slot name="tableFooter">
         <el-pagination
           v-model:currentPage="currentPage4"
@@ -49,7 +49,7 @@
 const currentPage4 = ref(4)
 const pageSize4 = ref(100)
 const small = ref(false)
-const background = ref(false)
+const background = ref(true)
 const disabled = ref(false)
 
 const handleSizeChange = (val: number) => {
@@ -66,6 +66,7 @@ const props = withDefaults(
     indexColumnLabel: string
     showIndexColumn: boolean
     selectColumnAlign: string
+    tableCount: number
   }>(),
   {
     showSelectColumn: true
