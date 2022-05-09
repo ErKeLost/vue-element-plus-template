@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full ease-in-out">
+  <div :class="{ 'p-25px': showPadding }" h-full ease-in-out>
     <router-view v-slot="{ Component, route }">
       <transition
         :name="theme.page.animate ? theme.page.animateMode : undefined"

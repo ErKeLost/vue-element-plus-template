@@ -1,13 +1,13 @@
-import { IFormConfig } from '@/components/form/types'
+import { IFormConfig } from '@/components/pageSearch/form/types'
 
 export const searchFormConfig: IFormConfig = {
   labelWidth: '100px',
   labelPosition: 'left',
   itemStyle: {
     // 不能跟 gutter 一起使用
-    // padding: '12px 20px 0px 0px'
+    // padding: '12px 20px 12px 20px'
   },
-  gutter: 40,
+  gutter: 50,
   operationLayout: {
     xl: 6,
     lg: 8,
@@ -16,20 +16,6 @@ export const searchFormConfig: IFormConfig = {
     xs: 24
   },
   formItems: [
-    {
-      field: 'name',
-      type: 'input',
-      label: '用户名',
-      rules: [],
-      placeholder: '请输入用户名'
-    },
-    {
-      field: 'realname',
-      type: 'input',
-      label: '真实姓名',
-      rules: [],
-      placeholder: '请输入真实姓名'
-    },
     {
       field: 'name',
       type: 'input',
