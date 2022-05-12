@@ -60,6 +60,7 @@ declare module 'vue' {
     LoginPreview: typeof import('./../src/views/login/cpns/login-preview.vue')['default']
     LogosBitriseIcon: typeof import('./../src/components/icon/LogosBitriseIcon.vue')['default']
     ManualExecutionResults: typeof import('./../src/views/scheduledTask/manualExecutionResults/index.vue')['default']
+    NewVerify: typeof import('./../src/components/Verify/newVerify.vue')['default']
     PageSearch: typeof import('./../src/components/pageSearch/index.vue')['default']
     PageTable: typeof import('./../src/components/pageTable/index.vue')['default']
     Redirect: typeof import('./../src/views/redirect/index.vue')['default']

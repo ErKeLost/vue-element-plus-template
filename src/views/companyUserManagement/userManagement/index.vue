@@ -15,7 +15,7 @@
       ></verify>
       <el-button @click="handleClick">在父组件可以点我刷新哦</el-button>
     </div>
-    <testverify
+    <!-- <testverify
       ref="slideblock2"
       @success="onSuccess"
       @again="onAgain"
@@ -25,7 +25,8 @@
       slider-text="按住左边按钮拖动完成上方拼图"
       :imgs="imgs"
       :accuracy="accuracy"
-    ></testverify>
+    ></testverify> -->
+    <newVerify :width="552"></newVerify>
   </div>
 </template>
 
