@@ -81,6 +81,7 @@ declare module 'vue' {
     UserManagement: typeof import('./../src/views/companyUserManagement/userManagement/index.vue')['default']
     UserOperationRecord: typeof import('./../src/views/userUsageStatistics/userOperationRecord/index.vue')['default']
     UserStatistics: typeof import('./../src/views/companyUserManagement/userStatistics/index.vue')['default']
+    Verify: typeof import('./../src/components/Verify/index.vue')['default']
     WhiteList: typeof import('./../src/views/companyUserManagement/whiteList/index.vue')['default']
   }
 }
