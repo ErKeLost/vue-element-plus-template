@@ -138,8 +138,8 @@ export default {
         this.canvasCtx.drawImage(img, 0, 0, this.width, this.height)
         this.blockCtx.drawImage(img, 0, 0, this.width, this.height)
         let { block_x: x, block_y: y, r, L } = this
-        console.log(this.block_x, this.x);
-        
+        console.log(this.block_x, this.x)
+
         let _y = y - r * 2 - 1
         let ImageData = this.blockCtx.getImageData(x, _y, L, L)
         this.block.width = L
@@ -220,7 +220,10 @@ export default {
     },
     bindEvents() {
       document.addEventListener('mousemove', (e) => {
+        console.log(!this.isMouseDown)
+
         if (!this.isMouseDown) return false
+
         const moveX = e.clientX - this.originX
         const moveY = e.clientY - this.originY
         if (moveX < 0 || moveX + 38 >= this.width) return false

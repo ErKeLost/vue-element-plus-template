@@ -2,7 +2,7 @@
   <div id="app">
     <div flex>
       <el-image :src="verify"></el-image>
-      <verify
+      <!-- <verify
         ref="slideblock"
         @success="onSuccess"
         @again="onAgain"
@@ -12,8 +12,8 @@
         slider-text="按住左边按钮拖动完成上方拼图"
         :imgs="imgs"
         :accuracy="accuracy"
-      ></verify>
-      <el-button @click="handleClick">在父组件可以点我刷新哦</el-button>
+      ></verify> -->
+      <!-- <el-button @click="handleClick">在父组件可以点我刷新哦</el-button> -->
     </div>
     <!-- <testverify
       ref="slideblock2"

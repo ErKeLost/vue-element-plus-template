@@ -1,4 +1,5 @@
 <template>
+  <el-button @click="reset">重置</el-button>
   <div
     class="slide-verify"
     :style="{ width: width + 'px' }"
@@ -23,9 +24,6 @@
         <!-- slider -->
         <div
           @mousedown="sliderDown"
-          @touchstart="touchStartEvent"
-          @touchmove="touchMoveEvent"
-          @touchend="touchEndEvent"
           class="slide-verify-slider-mask-item"
           :style="{ left: sliderLeft }"
           flex
@@ -59,6 +57,7 @@ const props = withDefaults(
 )
 const emit = defineEmits<{
   (e: 'refresh'): void
+  (e: 'reset'): void
 }>()
 const activeStatus = ref<boolean>(false) // 按住时 active 状态
 const successStatus = ref<boolean>(false) // 成功状态
@@ -71,6 +70,8 @@ const originY = ref<number>(0)
 const timestamp = ref<number>()
 const sliderLeft = ref<string>('')
 const dog = ref<HTMLElement | null>()
+const sliderMaskWidth = ref<string>()
+const trail: number[] = []
 onMounted(() => {
   init()
 })
@@ -87,18 +88,21 @@ function sliderDown(event: any) {
 }
 function bindEvents() {
   document.addEventListener('mousemove', (e) => {
-    if (!isMouseDown) return false
+    if (!isMouseDown.value) return false
+    console.log(!isMouseDown.value)
+    dog.value!.style.transition = 'none'
     const moveX = e.clientX - originX.value
-    // const moveY = e.clientY - originY.value
-    if (moveX < 0 || moveX + 38 >= props.width) return false
+    const moveY = e.clientY - originY.value
+    if (moveX < 0 || moveX >= props.width) return false
     sliderLeft.value = moveX + 'px'
     let blockLeft = ((props.width - 40 - 20) / (props.width - 40)) * moveX
     dog.value!.style.left = blockLeft + 'px'
     activeStatus.value = true // add active
-    // this.sliderMaskWidth = moveX + 50 + 'px'
-    // this.trail.push(moveY)
+    sliderMaskWidth.value = moveX + 50 + 'px'
+    trail.push(moveY)
   })
   document.addEventListener('mouseup', (e) => {
+    dog.value!.style.transition = 'left 0.3s ease-in-out'
     if (!isMouseDown.value) return false
     isMouseDown.value = false
     if (e.clientX === originX.value) return false
@@ -130,6 +134,16 @@ function bindEvents() {
     // }
   })
 }
+function reset() {
+  success.value = false
+  activeStatus.value = false
+  successStatus.value = false
+  failStatus.value = false
+  sliderLeft.value = '0px'
+  dog.value!.style.left = ''
+  sliderMaskWidth.value = ''
+}
+emit('reset')
 </script>
 <style scoped>
 .moveImage {
