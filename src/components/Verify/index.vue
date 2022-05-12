@@ -1,21 +1,20 @@
 <template>
   <div
     class="slide-verify"
-    :style="{ width: w + 'px' }"
+    :style="{ width: width + 'px' }"
     id="slideVerify"
     onselectstart="return false;"
   >
     <!-- 图片加载遮蔽罩 -->
     <div :class="{ 'slider-verify-loading': loadBlock }"></div>
-    <canvas :width="w" :height="h" ref="canvas"></canvas>
+    <canvas :width="width" :height="height" ref="canvas"></canvas>
     <div v-if="show" @click="refresh" class="slide-verify-refresh-icon"></div>
     <canvas
-      :width="w"
-      :height="h"
+      :width="width"
+      :height="height"
       ref="block"
       class="slide-verify-block"
     ></canvas>
-    <!-- container -->
     <div
       class="slide-verify-slider"
       :class="{
@@ -33,20 +32,25 @@
           @touchend="touchEndEvent"
           class="slide-verify-slider-mask-item"
           :style="{ left: sliderLeft }"
+          flex
+          items-center
+          justify-center
         >
-          <div class="slide-verify-slider-mask-item-icon"></div>
+          <div text-3xl class="i-mdi-arrow-right-bold arrow-class"></div>
         </div>
       </div>
-      <span class="slide-verify-slider-text">{{ sliderText }}</span>
+      <span text-1 ml-12 c-gray class="slide-verify-slider-text">{{
+        sliderText
+      }}</span>
     </div>
   </div>
 </template>
-<script>
+<script lang="ts">
 const PI = Math.PI
-function sum(x, y) {
+function sum(x: number, y: number) {
   return x + y
 }
-function square(x) {
+function square(x: number) {
   return x * x
 }
 export default {
@@ -55,7 +59,7 @@ export default {
     // block length
     l: {
       type: Number,
-      default: 42
+      default: 50
     },
     // block radius
     r: {
@@ -63,14 +67,14 @@ export default {
       default: 10
     },
     // canvas width
-    w: {
+    width: {
       type: Number,
-      default: 310
+      default: 340
     },
     // canvas height
-    h: {
+    height: {
       type: Number,
-      default: 155
+      default: 210
     },
     sliderText: {
       type: String,
@@ -131,9 +135,11 @@ export default {
         // 图片加载完关闭遮蔽罩
         this.loadBlock = false
         this.drawBlock()
-        this.canvasCtx.drawImage(img, 0, 0, this.w, this.h)
-        this.blockCtx.drawImage(img, 0, 0, this.w, this.h)
+        this.canvasCtx.drawImage(img, 0, 0, this.width, this.height)
+        this.blockCtx.drawImage(img, 0, 0, this.width, this.height)
         let { block_x: x, block_y: y, r, L } = this
+        console.log(this.block_x, this.x);
+        
         let _y = y - r * 2 - 1
         let ImageData = this.blockCtx.getImageData(x, _y, L, L)
         this.block.width = L
@@ -144,11 +150,11 @@ export default {
     drawBlock() {
       this.block_x = this.getRandomNumberByRange(
         this.L + 10,
-        this.w - (this.L + 10)
+        this.width - (this.L + 10)
       )
       this.block_y = this.getRandomNumberByRange(
         10 + this.r * 2,
-        this.h - (this.L + 10)
+        this.height - (this.L + 10)
       )
       this.draw(this.canvasCtx, this.block_x, this.block_y, 'fill')
       this.draw(this.blockCtx, this.block_x, this.block_y, 'clip')
@@ -162,10 +168,10 @@ export default {
       ctx.arc(x + l + r - 2, y + l / 2, r, 1.21 * PI, 2.78 * PI)
       ctx.lineTo(x + l, y + l)
       ctx.lineTo(x, y + l)
-      ctx.arc(x + r - 2, y + l / 2, r + 0.4, 2.76 * PI, 1.24 * PI, true)
+      // ctx.arc(x + r - 2, y + l / 2, r + 0.4, 2.76 * PI, 1.24 * PI, true)
       ctx.lineTo(x, y)
       ctx.lineWidth = 2
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.7)'
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.39)'
       ctx.strokeStyle = 'rgba(255, 255, 255, 0.7)'
       ctx.stroke()
       ctx[operation]()
@@ -217,12 +223,12 @@ export default {
         if (!this.isMouseDown) return false
         const moveX = e.clientX - this.originX
         const moveY = e.clientY - this.originY
-        if (moveX < 0 || moveX + 38 >= this.w) return false
+        if (moveX < 0 || moveX + 38 >= this.width) return false
         this.sliderLeft = moveX + 'px'
-        let blockLeft = ((this.w - 40 - 20) / (this.w - 40)) * moveX
+        let blockLeft = ((this.width - 40 - 20) / (this.width - 40)) * moveX
         this.block.style.left = blockLeft + 'px'
         this.containerActive = true // add active
-        this.sliderMaskWidth = moveX + 'px'
+        this.sliderMaskWidth = moveX + 50 + 'px'
         this.trail.push(moveY)
       })
       document.addEventListener('mouseup', (e) => {
@@ -261,9 +267,9 @@ export default {
       if (!this.isMouseDown) return false
       const moveX = e.changedTouches[0].pageX - this.originX
       const moveY = e.changedTouches[0].pageY - this.originY
-      if (moveX < 0 || moveX + 38 >= this.w) return false
+      if (moveX < 0 || moveX + 38 >= this.width) return false
       this.sliderLeft = moveX + 'px'
-      let blockLeft = ((this.w - 40 - 20) / (this.w - 40)) * moveX
+      let blockLeft = ((this.width - 40 - 20) / (this.width - 40)) * moveX
       this.block.style.left = blockLeft + 'px'
       this.containerActive = true
       this.sliderMaskWidth = moveX + 'px'
@@ -322,10 +328,10 @@ export default {
       this.block.style.left = 0
       this.sliderMaskWidth = 0
       // canvas
-      let { w, h } = this
-      this.canvasCtx.clearRect(0, 0, w, h)
-      this.blockCtx.clearRect(0, 0, w, h)
-      this.block.width = w
+      let { width, height } = this
+      this.canvasCtx.clearRect(0, 0, width, height)
+      this.blockCtx.clearRect(0, 0, width, height)
+      this.block.width = width
       // generate img
       this.img.src = this.getRandomImg()
       this.$emit('fulfilled')
@@ -334,6 +340,9 @@ export default {
 }
 </script>
 <style scoped>
+.arrow-class {
+  color: rgb(196, 196, 196);
+}
 .slide-verify {
   position: relative;
 }
@@ -374,13 +383,15 @@ export default {
 .slide-verify-slider {
   position: relative;
   text-align: center;
-  width: 100%;
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  width: calc(100%);
   height: 40px;
   line-height: 40px;
-  margin-top: 15px;
-  background: #f7f9fa;
+  margin-top: 5px;
+  background: #f3f3f3;
   color: #45494c;
-  border: 1px solid #e4e7eb;
+  border-radius: 5px;
 }
 .slide-verify-slider-mask {
   position: absolute;
@@ -394,15 +405,13 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 100%;
   background: #fff;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(104, 104, 104, 0.2);
+  border-radius: 5px;
   cursor: pointer;
   transition: background 0.2s linear;
-}
-.slide-verify-slider-mask-item:hover {
-  background: #1991fa;
 }
 .slide-verify-slider-mask-item:hover .slide-verify-slider-mask-item-icon {
   background-position: 0 -13px;
@@ -419,7 +428,8 @@ export default {
 .container-active .slide-verify-slider-mask-item {
   height: 38px;
   top: -1px;
-  border: 1px solid #1991fa;
+  border: 1px solid transparent;
+  transform: scale(1.05);
 }
 .container-active .slide-verify-slider-mask {
   height: 38px;
@@ -428,12 +438,12 @@ export default {
 .container-success .slide-verify-slider-mask-item {
   height: 38px;
   top: -1px;
-  border: 1px solid #52ccba;
-  background-color: #52ccba !important;
+  border: 1px solid transparent;
+  /* background-color: #68ebb4 !important; */
 }
 .container-success .slide-verify-slider-mask {
   height: 38px;
-  border: 1px solid #52ccba;
+  border: 1px solid transparent;
   background-color: #d2f4ef;
 }
 .container-success .slide-verify-slider-mask-item-icon {
@@ -442,12 +452,11 @@ export default {
 .container-fail .slide-verify-slider-mask-item {
   height: 38px;
   top: -1px;
-  border: 1px solid #f57a7a;
-  background-color: #f57a7a !important;
+  border: 1px solid transparent;
 }
 .container-fail .slide-verify-slider-mask {
   height: 38px;
-  border: 1px solid #f57a7a;
+  border: 1px solid transparent;
   background-color: #fce1e1;
 }
 .container-fail .slide-verify-slider-mask-item-icon {

@@ -1,22 +1,36 @@
 <template>
   <div id="app">
-    <verify
-      ref="slideblock"
+    <div flex>
+      <el-image :src="verify"></el-image>
+      <verify
+        ref="slideblock"
+        @success="onSuccess"
+        @again="onAgain"
+        @fulfilled="onFulfilled"
+        @fail="onFail"
+        @refresh="onRefresh"
+        slider-text="按住左边按钮拖动完成上方拼图"
+        :imgs="imgs"
+        :accuracy="accuracy"
+      ></verify>
+      <el-button @click="handleClick">在父组件可以点我刷新哦</el-button>
+    </div>
+    <testverify
+      ref="slideblock2"
       @success="onSuccess"
       @again="onAgain"
       @fulfilled="onFulfilled"
       @fail="onFail"
       @refresh="onRefresh"
-      :slider-text="text"
+      slider-text="按住左边按钮拖动完成上方拼图"
       :imgs="imgs"
       :accuracy="accuracy"
-    ></verify>
-    <div>{{ msg }}</div>
-    <button class="btn" @click="handleClick">在父组件可以点我刷新哦</button>
+    ></testverify>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import verify from '@/assets/verify.png'
 import img0 from '@/assets/img.jpg'
 import img1 from '@/assets/img1.jpg'
 import img2 from '@/assets/img2.jpg'
@@ -28,6 +42,7 @@ export default {
   data() {
     return {
       msg: '',
+      verify,
       text: '向右滑动->',
       imgs: [img0, img1, img2, img3, img4, img5],
       accuracy: 1 // 精确度小，可允许的误差范围小；为1时，则表示滑块要与凹槽完全重叠，才能验证成功。默认值为5
@@ -63,25 +78,4 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-.btn {
-  margin-top: 20px;
-  outline: 0;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  color: #fff;
-  background-color: #1890ff;
-  cursor: pointer;
-}
-.btn:active {
-  box-shadow: 1px 5px 0 rgba(0, 0, 0, 0.1) inset;
-}
-</style>
+<style></style>
